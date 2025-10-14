@@ -1,0 +1,22 @@
+{
+    "Mon": "lun",
+    "Tue": "mar",
+    "Wed": "mer",
+    "Thu": "jeu",
+    "Fri": "ven",
+    "Sat": "sam",
+    "Sun": "dim",
+
+   "January": "Janvier" ,
+   "February": "Février" ,
+   "March" : "Mars",
+   "April": "Avril",
+   "May" : "Mai",
+   "June" : "Juin",
+   "July" : "Juillet" ,
+   "August" : "Août",
+   "September" : "Septembre",
+   "October" : "Octobre" ,
+   "November" : "Novembre" ,
+   "December": "Décembre"
+}

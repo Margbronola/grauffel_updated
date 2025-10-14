@@ -1,0 +1,131 @@
+// ignore_for_file: avoid_print
+import 'package:flutter/material.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
+import 'package:stacked/stacked.dart';
+import 'package:stacked_services/stacked_services.dart';
+
+import '../../../app/app.locator.dart';
+import '../../../app/global.dart';
+import '../../../models/activity_model.dart';
+import '../../../services/booking_api_service.dart';
+import '../../../services/booking_service.dart';
+import '../../../services/user_service.dart';
+import '../../home/reservation/steps/reserve_steps_view.dart';
+import '../../shared/widget/dialog/setup_dialog_ui.dart';
+
+class CoursesListViewModel extends BaseViewModel {
+  final BookingAPIService _bookingAPIService = locator<BookingAPIService>();
+  final UserService _userService = locator<UserService>();
+  final DialogService _dialogService = locator<DialogService>();
+  final BookingService _bookingService = locator<BookingService>();
+  final NavigationService _navigationService = locator<NavigationService>();
+
+  List<ActivityModel> get bookableCourse => _bookingAPIService.bookableCourse!;
+  List<ActivityModel> get cours =>
+      _bookingAPIService.bookableCourse!
+          .where((element) => element.type!.name == "cours")
+          //  || element.type!.name == "initiation"
+          .toList();
+
+  List<ActivityModel> get entrainement =>
+      _bookingAPIService.bookableCourse!
+          .where((element) => element.type!.name == "entrainement")
+          .toList();
+  List<ActivityModel> get stages =>
+      _bookingAPIService.bookableCourse!
+          .where((element) => element.type!.name == "stage")
+          .toList();
+
+  Future init() async {
+    if (_bookingAPIService.bookableCourse!.isEmpty) {
+      setBusy(true);
+      await _bookingAPIService.fetchCourses(token: _userService.token!);
+      notifyListeners();
+      setBusy(false);
+    }
+  }
+
+  Future<int> checkExistBooking(int courseId) async {
+    return await _bookingAPIService.isBookingExist(
+      token: _userService.token!,
+      courseId: courseId,
+    );
+  }
+
+  Future<bool> checkSlotFull(ActivityModel course) async {
+    print("COURSE CHECKER");
+    print(
+      "ACTIVE BOOKING : ${course.active_booking_count} and  MAX PERSON: ${course.max_persons}",
+    );
+    return course.active_booking_count! == course.max_persons!;
+  }
+
+  Future cardSelected(int index) async {
+    setBusy(true);
+    int isExist = await checkExistBooking(bookableCourse[index].id!);
+    bool isFull = await checkSlotFull(bookableCourse[index]);
+    debugPrint("Card Reserve click");
+    print(loggedUser);
+    print(isExist);
+    if (loggedUser!.initiation_course == 1) {
+      if (loggedUser!.completed_steps == null) {
+        showExistDialog(
+          "Nous évaluons votre compte pour la phase d'initiation.",
+        );
+      } else {
+        showExistDialog(
+          "Vous devez finir votre initiation avant de pouvoir accéder à l'ensemble des possibilités.",
+        );
+      }
+    } else {
+      if (isExist == 1) {
+        showExistDialog("Vous avez déjà réservé ce cours.");
+      } else if (isFull) {
+        showExistDialog("La réservation du cours est complète");
+      } else {
+        debugPrint("click");
+        navigateToReservation(bookable: bookableCourse[index]);
+      }
+    }
+    setBusy(false);
+  }
+
+  void navigateToReservation({required ActivityModel bookable}) async {
+    _bookingService.setSelectedBookable = bookable;
+    print(bookable);
+    if (_bookingService.getselectedBookable != null) {
+      _navigationService.navigateToView(const ReserveStepsView());
+    }
+  }
+
+  void showExistDialog(String desc) {
+    _dialogService.showCustomDialog(
+      title: "Réservation",
+      description: desc,
+      mainButtonTitle: "d'accord",
+      variant: DialogType.confirmation,
+    );
+  }
+
+  final RefreshController refreshController = RefreshController(
+    initialRefresh: false,
+  );
+
+  void onRefresh() async {
+    // monitor network fetch
+    await _bookingAPIService.fetchCourses(
+      token: _userService.token!,
+      isFetchMore: true,
+    );
+    // if failed,use refreshFailed()
+    refreshController.refreshCompleted();
+    notifyListeners();
+  }
+
+  void onLoading() async {
+    // monitor network fetch
+    // await Future.delayed(const Duration(milliseconds: 1000));
+    refreshController.loadComplete();
+    notifyListeners();
+  }
+}
