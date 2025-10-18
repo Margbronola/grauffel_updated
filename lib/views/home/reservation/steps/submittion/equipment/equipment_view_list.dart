@@ -175,7 +175,9 @@ Widget equipemntCardView({
                                           ),
                                     ),
                                     Text(
-                                      equipmentModel.name!,
+                                      equipmentModel.name == null
+                                          ? ""
+                                          : equipmentModel.name!,
                                       overflow: TextOverflow.ellipsis,
                                       style: ThemeData().textTheme.bodyLarge!
                                           .copyWith(

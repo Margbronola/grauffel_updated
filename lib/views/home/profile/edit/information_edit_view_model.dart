@@ -212,13 +212,14 @@ class InformationEditViewModel extends ReactiveViewModel {
       // List<Media>? res = await ImagePicker.pick(pickType: PickType.image);
       final XFile? image = await picker.pickImage(source: ImageSource.gallery);
       // List<Media>? res = await ImagesPicker.pick(pickType: PickType.image);
-      print(image);
+      print("IMAGE PICK: $image");
       if (image != null) {
         // print(image.map((e) => e.path).toList());
         path = image.path;
+        print("PATH OF IMAGE: $path");
         file = await downloadFile(image.path);
         // bool status = await ImagesPicker.saveImageToAlbum(File(res[0]?.path));
-        print(path);
+        print("FILE OF IMAGE: $file");
       }
       notifyListeners();
     } catch (e) {
@@ -227,6 +228,12 @@ class InformationEditViewModel extends ReactiveViewModel {
   }
 
   Future<File> downloadFile(String url) async {
+    if (!url.startsWith('http')) {
+      // It's already a local file
+      print('Local file detected: $url');
+      return File(url);
+    }
+
     Dio simple = Dio();
     String savePath = '${Directory.systemTemp.path}/${url.split('/').last}';
     await simple.download(
@@ -234,10 +241,22 @@ class InformationEditViewModel extends ReactiveViewModel {
       savePath,
       options: Options(responseType: ResponseType.bytes),
     );
-    print(savePath);
-    File file = File(savePath);
-    return file;
+    print("SAVE PATH: $savePath");
+    return File(savePath);
   }
+
+  // Future<File> downloadFile(String url) async {
+  //   Dio simple = Dio();
+  //   String savePath = '${Directory.systemTemp.path}/${url.split('/').last}';
+  //   await simple.download(
+  //     url,
+  //     savePath,
+  //     options: Options(responseType: ResponseType.bytes),
+  //   );
+  //   print("SAVE PATH: $savePath");
+  //   File file = File(savePath);
+  //   return file;
+  // }
 
   void showDatePicker2(context) async {
     debugPrint("Show date picker");

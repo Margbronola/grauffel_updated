@@ -1,7 +1,6 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_expanded_tile/flutter_expanded_tile.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 import '../../../app/app.locator.dart';
@@ -184,28 +183,6 @@ class ProfileViewModel extends ReactiveViewModel {
 
     documentLoader = false;
     notifyListeners();
-  }
-
-  Future<String?> pickInGallary() async {
-    final ImagePicker picker = ImagePicker();
-    // List<Media>? res = await ImagePicker.pick(pickType: PickType.image);
-    final XFile? image = await picker.pickImage(source: ImageSource.gallery);
-    print("IMAGE: $image");
-    return null;
-    // String? image = await _picker. .pickImage(source: ImageSource.gallery);
-    // return image;
-  }
-
-  // Capture a photo
-  Future<String?> captureImage() async {
-    final ImagePicker picker = ImagePicker();
-    // List<Media>? res = await ImagesPicker.openCamera(pickType: PickType.image);
-    final XFile? photo = await picker.pickImage(source: ImageSource.camera);
-
-    print("IMAGE: $photo");
-    return null;
-    // XFile? image = await _picker.pickImage(source: ImageSource.camera);
-    // return image;
   }
 
   void editInformation() {
