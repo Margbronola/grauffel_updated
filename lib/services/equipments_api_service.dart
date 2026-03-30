@@ -12,7 +12,6 @@ class EquipmentsAPIService {
   List<EquipmentModel>? get equipments => _equipments;
   PagingModel? _pagingModel;
   PagingModel? get pagingModel => _pagingModel;
-  final int _perPage = 100;
 
   Future<void> fetchAllEquipments({
     required String token,
@@ -20,12 +19,10 @@ class EquipmentsAPIService {
   }) async {
     String removeUnnessaryfields =
         "&onlyfields=id,name,brand_id,image_id,description,price,stock,status";
-    String url =
-        "$urlApi/equipments?per_page=$_perPage&nobook=true$removeUnnessaryfields";
+    String url = "$urlApi/v2/equipments?nobook=true$removeUnnessaryfields";
 
     if (fetchMore) {
-      url =
-          "${_pagingModel!.next_page_url}&per_page=$_perPage&nobook=true$removeUnnessaryfields";
+      url = "${_pagingModel!.next_page_url}&nobook=true$removeUnnessaryfields";
     }
     try {
       final respo = await http.get(
@@ -36,10 +33,10 @@ class EquipmentsAPIService {
         },
       );
       if (respo.statusCode == 200) {
-        var data = json.decode(respo.body);
+        // var data = json.decode(respo.body);
         try {
           debugPrint("FETCH EQUIPMENTS PASS");
-          List fertchEquipment = data['data'];
+          List fertchEquipment = json.decode(respo.body);
 
           if (fetchMore) {
             _equipments!.addAll(
@@ -50,13 +47,13 @@ class EquipmentsAPIService {
                 fertchEquipment.map((e) => EquipmentModel.fromJson(e)).toList();
           }
 
-          _pagingModel = PagingModel(
-            current_page: data['current_page'],
-            first_page_url: data['first_page_url'],
-            next_page_url: data['next_page_url'],
-            prev_page_url: data['prev_page_url'],
-            total: data['total'],
-          );
+          // _pagingModel = PagingModel(
+          //   current_page: data['current_page'],
+          //   first_page_url: data['first_page_url'],
+          //   next_page_url: data['next_page_url'],
+          //   prev_page_url: data['prev_page_url'],
+          //   total: data['total'],
+          // );
         } catch (e) {
           print(e);
           debugPrint("FROMJSON FAIL");

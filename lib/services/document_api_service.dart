@@ -46,6 +46,7 @@ class DocumentAPIService {
                 },
       );
       if (respo.statusCode == 200 || respo.statusCode == 201) {
+        print("RESPO BODY (UPLOAD DOC): ${respo.body}");
         return true;
       } else {
         debugPrint("SERVER FAIL uploadDocument");

@@ -34,10 +34,10 @@ android {
         applicationId = "com.grauffel.eg_czacademy"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = 26
-        targetSdk = flutter.targetSdkVersion
-        versionCode = 41
-        versionName = "3.0.1"
+        minSdk = 29
+        targetSdk = 36
+        versionCode = 42
+        versionName = "3.0.2"
     }
 
     signingConfigs {

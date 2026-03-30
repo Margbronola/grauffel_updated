@@ -103,6 +103,7 @@ class UserAPIService {
         var data = json.decode(respo.body);
         try {
           debugPrint("CHANGE AVATAR");
+          print("DATAAA: $data");
         } catch (e) {
           print(e);
           debugPrint("CHANGE AVATAR FAIL");

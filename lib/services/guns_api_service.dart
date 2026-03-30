@@ -15,7 +15,6 @@ class GunAPIService {
   List<GunModel>? get guns => _guns;
   PagingModel? _pagingModel;
   PagingModel? get pagingModel => _pagingModel;
-  final int _perPage = 100;
 
   Future<void> fetchAllGuns({
     required String token,
@@ -38,11 +37,11 @@ class GunAPIService {
 
     //dateformat --> 2022-02-01 10:00
     String url =
-        "$urlApi/guns?per_page=$_perPage&nobook=true&booking=true&start_date=$startDate&end_date=$endDate";
+        "$urlApi/v2/guns?nobook=true&booking=true&start_date=$startDate&end_date=$endDate";
 
     if (fetchMore) {
       url =
-          "${_pagingModel!.next_page_url}&per_page=$_perPage&nobook=true&booking=true&start_date=$startDate&end_date=$endDate";
+          "${_pagingModel!.next_page_url}&nobook=true&booking=true&start_date=$startDate&end_date=$endDate";
     }
 
     if (brandIds != null) {
@@ -66,33 +65,37 @@ class GunAPIService {
           "Authorization": "Bearer $token",
         },
       );
+      print("RESPONSE STATUSCODE: ${respo.statusCode}");
       if (respo.statusCode == 200) {
-        var data = json.decode(respo.body);
+        // var data = json.decode(respo.body);
         try {
-          List fetchGuns = data['data'];
-          print("GUNS: $fetchGuns");
+          // List fetchGuns = data['data'];
+          List<dynamic> fetchGuns = json.decode(respo.body);
+          print("FETCH GUNS: $fetchGuns");
           if (fetchMore) {
             _guns!.addAll(fetchGuns.map((e) => GunModel.fromJson(e)).toList());
           } else {
             _guns = fetchGuns.map((e) => GunModel.fromJson(e)).toList();
           }
 
-          _pagingModel = PagingModel(
-            current_page: data['current_page'],
-            first_page_url: data['first_page_url'],
-            next_page_url: data['next_page_url'],
-            prev_page_url: data['prev_page_url'],
-            total: data['total'],
-          );
-        } catch (e) {
+          // _pagingModel = PagingModel(
+          //   current_page: data['current_page'],
+          //   first_page_url: data['first_page_url'],
+          //   next_page_url: data['next_page_url'],
+          //   prev_page_url: data['prev_page_url'],
+          //   total: data['total'],
+          // );
+        } catch (e, s) {
           print(e);
+          print(s);
           debugPrint("FROMJSON FAIL");
         }
       } else {
         debugPrint("SERVER FAIL fetch all guns");
       }
-    } catch (e) {
+    } catch (e, s) {
       print(e);
+      print(s);
       debugPrint("FETCH GUNS FAIL");
     }
   }

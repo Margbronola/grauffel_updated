@@ -12,7 +12,6 @@ class AmmunitionAPIService {
   List<AmmunitionsModel>? get ammunitions => _ammunitions;
   PagingModel? _pagingModel;
   PagingModel? get pagingModel => _pagingModel;
-  final int _perPage = 100;
 
   Future<void> fetchAllAmunition({
     required String token,
@@ -22,8 +21,7 @@ class AmmunitionAPIService {
   }) async {
     String removeUnnessaryfields =
         "&onlyfields=id,name,brand_id,caliber_id,image_id,description,price,stock,status";
-    String url =
-        "$urlApi/ammunitions?per_page=$_perPage&nobook=true$removeUnnessaryfields";
+    String url = "$urlApi/v2/ammunitions?nobook=true$removeUnnessaryfields";
 
     if (brandIds != null) {
       String brands = brandIds.join(', ');
@@ -40,8 +38,7 @@ class AmmunitionAPIService {
       }
     }
     if (fetchMore) {
-      url =
-          "${_pagingModel!.next_page_url}&per_page=$_perPage&nobook=true$removeUnnessaryfields";
+      url = "${_pagingModel!.next_page_url}&nobook=true$removeUnnessaryfields";
     }
 
     try {
@@ -53,10 +50,10 @@ class AmmunitionAPIService {
         },
       );
       if (respo.statusCode == 200) {
-        var data = json.decode(respo.body);
+        // var data = json.decode(respo.body);
         try {
           debugPrint("FETCH AMMUNITION PASS");
-          List fetchAmmunition = data['data'];
+          List fetchAmmunition = json.decode(respo.body);
 
           if (fetchMore) {
             debugPrint("FETCHING morel");
@@ -71,13 +68,13 @@ class AmmunitionAPIService {
                     .toList();
           }
 
-          _pagingModel = PagingModel(
-            current_page: data['current_page'],
-            first_page_url: data['first_page_url'],
-            next_page_url: data['next_page_url'],
-            prev_page_url: data['prev_page_url'],
-            total: data['total'],
-          );
+          // _pagingModel = PagingModel(
+          //   current_page: data['current_page'],
+          //   first_page_url: data['first_page_url'],
+          //   next_page_url: data['next_page_url'],
+          //   prev_page_url: data['prev_page_url'],
+          //   total: data['total'],
+          // );
         } catch (e) {
           print(e);
           debugPrint("FROMJSON FAIL");
