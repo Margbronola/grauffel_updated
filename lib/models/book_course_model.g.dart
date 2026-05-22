@@ -6,9 +6,9 @@ part of 'book_course_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_BookCourseModel _$$_BookCourseModelFromJson(Map<String, dynamic> json) =>
-    _$_BookCourseModel(
-      course_id: json['course_id'] as int?,
+_BookCourseModel _$BookCourseModelFromJson(Map<String, dynamic> json) =>
+    _BookCourseModel(
+      course_id: (json['course_id'] as num?)?.toInt(),
       guns: (json['guns'] as List<dynamic>?)
           ?.map((e) => GunModel.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -20,7 +20,7 @@ _$_BookCourseModel _$$_BookCourseModelFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_BookCourseModelToJson(_$_BookCourseModel instance) =>
+Map<String, dynamic> _$BookCourseModelToJson(_BookCourseModel instance) =>
     <String, dynamic>{
       'course_id': instance.course_id,
       'guns': instance.guns,

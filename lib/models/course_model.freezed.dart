@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,675 +9,399 @@ part of 'course_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-CourseModel _$CourseModelFromJson(Map<String, dynamic> json) {
-  return _CourseModel.fromJson(json);
-}
 
 /// @nodoc
 mixin _$CourseModel {
-  int? get id => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
-  int? get type_id => throw _privateConstructorUsedError;
-  int? get level_id => throw _privateConstructorUsedError;
-  int? get max_persons => throw _privateConstructorUsedError;
-  int? get active_booking_count => throw _privateConstructorUsedError;
-  double? get price => throw _privateConstructorUsedError;
-  String? get date_from => throw _privateConstructorUsedError;
-  String? get date_to => throw _privateConstructorUsedError;
-  String? get start_time => throw _privateConstructorUsedError;
-  String? get end_time => throw _privateConstructorUsedError;
-  String? get color_code => throw _privateConstructorUsedError;
-  List<int>? get period => throw _privateConstructorUsedError;
-  String? get admin_id => throw _privateConstructorUsedError;
-  String? get salle_id => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  int? get status => throw _privateConstructorUsedError;
-  DateTime? get created_at => throw _privateConstructorUsedError;
-  DateTime? get updated_at => throw _privateConstructorUsedError;
-  String? get status_name => throw _privateConstructorUsedError;
-  AdminModel? get admin => throw _privateConstructorUsedError;
-  TypeModel? get type => throw _privateConstructorUsedError;
-  List<dynamic>? get questions => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $CourseModelCopyWith<CourseModel> get copyWith =>
-      throw _privateConstructorUsedError;
+ int? get id; String? get name; int? get type_id; int? get level_id; int? get max_persons; int? get active_booking_count; double? get price; String? get date_from; String? get date_to; String? get start_time; String? get end_time; String? get color_code; List<int>? get period; String? get admin_id; String? get salle_id; String? get description; int? get status; DateTime? get created_at; DateTime? get updated_at; String? get status_name; AdminModel? get admin; TypeModel? get type; List<dynamic>? get questions;
+/// Create a copy of CourseModel
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$CourseModelCopyWith<CourseModel> get copyWith => _$CourseModelCopyWithImpl<CourseModel>(this as CourseModel, _$identity);
+
+  /// Serializes this CourseModel to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CourseModel&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.type_id, type_id) || other.type_id == type_id)&&(identical(other.level_id, level_id) || other.level_id == level_id)&&(identical(other.max_persons, max_persons) || other.max_persons == max_persons)&&(identical(other.active_booking_count, active_booking_count) || other.active_booking_count == active_booking_count)&&(identical(other.price, price) || other.price == price)&&(identical(other.date_from, date_from) || other.date_from == date_from)&&(identical(other.date_to, date_to) || other.date_to == date_to)&&(identical(other.start_time, start_time) || other.start_time == start_time)&&(identical(other.end_time, end_time) || other.end_time == end_time)&&(identical(other.color_code, color_code) || other.color_code == color_code)&&const DeepCollectionEquality().equals(other.period, period)&&(identical(other.admin_id, admin_id) || other.admin_id == admin_id)&&(identical(other.salle_id, salle_id) || other.salle_id == salle_id)&&(identical(other.description, description) || other.description == description)&&(identical(other.status, status) || other.status == status)&&(identical(other.created_at, created_at) || other.created_at == created_at)&&(identical(other.updated_at, updated_at) || other.updated_at == updated_at)&&(identical(other.status_name, status_name) || other.status_name == status_name)&&(identical(other.admin, admin) || other.admin == admin)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.questions, questions));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hashAll([runtimeType,id,name,type_id,level_id,max_persons,active_booking_count,price,date_from,date_to,start_time,end_time,color_code,const DeepCollectionEquality().hash(period),admin_id,salle_id,description,status,created_at,updated_at,status_name,admin,type,const DeepCollectionEquality().hash(questions)]);
+
+@override
+String toString() {
+  return 'CourseModel(id: $id, name: $name, type_id: $type_id, level_id: $level_id, max_persons: $max_persons, active_booking_count: $active_booking_count, price: $price, date_from: $date_from, date_to: $date_to, start_time: $start_time, end_time: $end_time, color_code: $color_code, period: $period, admin_id: $admin_id, salle_id: $salle_id, description: $description, status: $status, created_at: $created_at, updated_at: $updated_at, status_name: $status_name, admin: $admin, type: $type, questions: $questions)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $CourseModelCopyWith<$Res> {
-  factory $CourseModelCopyWith(
-          CourseModel value, $Res Function(CourseModel) then) =
-      _$CourseModelCopyWithImpl<$Res, CourseModel>;
-  @useResult
-  $Res call(
-      {int? id,
-      String? name,
-      int? type_id,
-      int? level_id,
-      int? max_persons,
-      int? active_booking_count,
-      double? price,
-      String? date_from,
-      String? date_to,
-      String? start_time,
-      String? end_time,
-      String? color_code,
-      List<int>? period,
-      String? admin_id,
-      String? salle_id,
-      String? description,
-      int? status,
-      DateTime? created_at,
-      DateTime? updated_at,
-      String? status_name,
-      AdminModel? admin,
-      TypeModel? type,
-      List<dynamic>? questions});
+abstract mixin class $CourseModelCopyWith<$Res>  {
+  factory $CourseModelCopyWith(CourseModel value, $Res Function(CourseModel) _then) = _$CourseModelCopyWithImpl;
+@useResult
+$Res call({
+ int? id, String? name, int? type_id, int? level_id, int? max_persons, int? active_booking_count, double? price, String? date_from, String? date_to, String? start_time, String? end_time, String? color_code, List<int>? period, String? admin_id, String? salle_id, String? description, int? status, DateTime? created_at, DateTime? updated_at, String? status_name, AdminModel? admin, TypeModel? type, List<dynamic>? questions
+});
 
-  $AdminModelCopyWith<$Res>? get admin;
-  $TypeModelCopyWith<$Res>? get type;
+
+$AdminModelCopyWith<$Res>? get admin;$TypeModelCopyWith<$Res>? get type;
+
 }
-
 /// @nodoc
-class _$CourseModelCopyWithImpl<$Res, $Val extends CourseModel>
+class _$CourseModelCopyWithImpl<$Res>
     implements $CourseModelCopyWith<$Res> {
-  _$CourseModelCopyWithImpl(this._value, this._then);
+  _$CourseModelCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final CourseModel _self;
+  final $Res Function(CourseModel) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? type_id = freezed,
-    Object? level_id = freezed,
-    Object? max_persons = freezed,
-    Object? active_booking_count = freezed,
-    Object? price = freezed,
-    Object? date_from = freezed,
-    Object? date_to = freezed,
-    Object? start_time = freezed,
-    Object? end_time = freezed,
-    Object? color_code = freezed,
-    Object? period = freezed,
-    Object? admin_id = freezed,
-    Object? salle_id = freezed,
-    Object? description = freezed,
-    Object? status = freezed,
-    Object? created_at = freezed,
-    Object? updated_at = freezed,
-    Object? status_name = freezed,
-    Object? admin = freezed,
-    Object? type = freezed,
-    Object? questions = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      type_id: freezed == type_id
-          ? _value.type_id
-          : type_id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      level_id: freezed == level_id
-          ? _value.level_id
-          : level_id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      max_persons: freezed == max_persons
-          ? _value.max_persons
-          : max_persons // ignore: cast_nullable_to_non_nullable
-              as int?,
-      active_booking_count: freezed == active_booking_count
-          ? _value.active_booking_count
-          : active_booking_count // ignore: cast_nullable_to_non_nullable
-              as int?,
-      price: freezed == price
-          ? _value.price
-          : price // ignore: cast_nullable_to_non_nullable
-              as double?,
-      date_from: freezed == date_from
-          ? _value.date_from
-          : date_from // ignore: cast_nullable_to_non_nullable
-              as String?,
-      date_to: freezed == date_to
-          ? _value.date_to
-          : date_to // ignore: cast_nullable_to_non_nullable
-              as String?,
-      start_time: freezed == start_time
-          ? _value.start_time
-          : start_time // ignore: cast_nullable_to_non_nullable
-              as String?,
-      end_time: freezed == end_time
-          ? _value.end_time
-          : end_time // ignore: cast_nullable_to_non_nullable
-              as String?,
-      color_code: freezed == color_code
-          ? _value.color_code
-          : color_code // ignore: cast_nullable_to_non_nullable
-              as String?,
-      period: freezed == period
-          ? _value.period
-          : period // ignore: cast_nullable_to_non_nullable
-              as List<int>?,
-      admin_id: freezed == admin_id
-          ? _value.admin_id
-          : admin_id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      salle_id: freezed == salle_id
-          ? _value.salle_id
-          : salle_id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      status: freezed == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as int?,
-      created_at: freezed == created_at
-          ? _value.created_at
-          : created_at // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      updated_at: freezed == updated_at
-          ? _value.updated_at
-          : updated_at // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      status_name: freezed == status_name
-          ? _value.status_name
-          : status_name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      admin: freezed == admin
-          ? _value.admin
-          : admin // ignore: cast_nullable_to_non_nullable
-              as AdminModel?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as TypeModel?,
-      questions: freezed == questions
-          ? _value.questions
-          : questions // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
-    ) as $Val);
+/// Create a copy of CourseModel
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? name = freezed,Object? type_id = freezed,Object? level_id = freezed,Object? max_persons = freezed,Object? active_booking_count = freezed,Object? price = freezed,Object? date_from = freezed,Object? date_to = freezed,Object? start_time = freezed,Object? end_time = freezed,Object? color_code = freezed,Object? period = freezed,Object? admin_id = freezed,Object? salle_id = freezed,Object? description = freezed,Object? status = freezed,Object? created_at = freezed,Object? updated_at = freezed,Object? status_name = freezed,Object? admin = freezed,Object? type = freezed,Object? questions = freezed,}) {
+  return _then(_self.copyWith(
+id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int?,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String?,type_id: freezed == type_id ? _self.type_id : type_id // ignore: cast_nullable_to_non_nullable
+as int?,level_id: freezed == level_id ? _self.level_id : level_id // ignore: cast_nullable_to_non_nullable
+as int?,max_persons: freezed == max_persons ? _self.max_persons : max_persons // ignore: cast_nullable_to_non_nullable
+as int?,active_booking_count: freezed == active_booking_count ? _self.active_booking_count : active_booking_count // ignore: cast_nullable_to_non_nullable
+as int?,price: freezed == price ? _self.price : price // ignore: cast_nullable_to_non_nullable
+as double?,date_from: freezed == date_from ? _self.date_from : date_from // ignore: cast_nullable_to_non_nullable
+as String?,date_to: freezed == date_to ? _self.date_to : date_to // ignore: cast_nullable_to_non_nullable
+as String?,start_time: freezed == start_time ? _self.start_time : start_time // ignore: cast_nullable_to_non_nullable
+as String?,end_time: freezed == end_time ? _self.end_time : end_time // ignore: cast_nullable_to_non_nullable
+as String?,color_code: freezed == color_code ? _self.color_code : color_code // ignore: cast_nullable_to_non_nullable
+as String?,period: freezed == period ? _self.period : period // ignore: cast_nullable_to_non_nullable
+as List<int>?,admin_id: freezed == admin_id ? _self.admin_id : admin_id // ignore: cast_nullable_to_non_nullable
+as String?,salle_id: freezed == salle_id ? _self.salle_id : salle_id // ignore: cast_nullable_to_non_nullable
+as String?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
+as String?,status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
+as int?,created_at: freezed == created_at ? _self.created_at : created_at // ignore: cast_nullable_to_non_nullable
+as DateTime?,updated_at: freezed == updated_at ? _self.updated_at : updated_at // ignore: cast_nullable_to_non_nullable
+as DateTime?,status_name: freezed == status_name ? _self.status_name : status_name // ignore: cast_nullable_to_non_nullable
+as String?,admin: freezed == admin ? _self.admin : admin // ignore: cast_nullable_to_non_nullable
+as AdminModel?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as TypeModel?,questions: freezed == questions ? _self.questions : questions // ignore: cast_nullable_to_non_nullable
+as List<dynamic>?,
+  ));
+}
+/// Create a copy of CourseModel
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$AdminModelCopyWith<$Res>? get admin {
+    if (_self.admin == null) {
+    return null;
   }
 
-  @override
-  @pragma('vm:prefer-inline')
-  $AdminModelCopyWith<$Res>? get admin {
-    if (_value.admin == null) {
-      return null;
-    }
-
-    return $AdminModelCopyWith<$Res>(_value.admin!, (value) {
-      return _then(_value.copyWith(admin: value) as $Val);
-    });
+  return $AdminModelCopyWith<$Res>(_self.admin!, (value) {
+    return _then(_self.copyWith(admin: value));
+  });
+}/// Create a copy of CourseModel
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$TypeModelCopyWith<$Res>? get type {
+    if (_self.type == null) {
+    return null;
   }
 
-  @override
-  @pragma('vm:prefer-inline')
-  $TypeModelCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $TypeModelCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value) as $Val);
-    });
-  }
+  return $TypeModelCopyWith<$Res>(_self.type!, (value) {
+    return _then(_self.copyWith(type: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$_CourseModelCopyWith<$Res>
-    implements $CourseModelCopyWith<$Res> {
-  factory _$$_CourseModelCopyWith(
-          _$_CourseModel value, $Res Function(_$_CourseModel) then) =
-      __$$_CourseModelCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {int? id,
-      String? name,
-      int? type_id,
-      int? level_id,
-      int? max_persons,
-      int? active_booking_count,
-      double? price,
-      String? date_from,
-      String? date_to,
-      String? start_time,
-      String? end_time,
-      String? color_code,
-      List<int>? period,
-      String? admin_id,
-      String? salle_id,
-      String? description,
-      int? status,
-      DateTime? created_at,
-      DateTime? updated_at,
-      String? status_name,
-      AdminModel? admin,
-      TypeModel? type,
-      List<dynamic>? questions});
 
-  @override
-  $AdminModelCopyWith<$Res>? get admin;
-  @override
-  $TypeModelCopyWith<$Res>? get type;
+/// Adds pattern-matching-related methods to [CourseModel].
+extension CourseModelPatterns on CourseModel {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CourseModel value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _CourseModel() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CourseModel value)  $default,){
+final _that = this;
+switch (_that) {
+case _CourseModel():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CourseModel value)?  $default,){
+final _that = this;
+switch (_that) {
+case _CourseModel() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? id,  String? name,  int? type_id,  int? level_id,  int? max_persons,  int? active_booking_count,  double? price,  String? date_from,  String? date_to,  String? start_time,  String? end_time,  String? color_code,  List<int>? period,  String? admin_id,  String? salle_id,  String? description,  int? status,  DateTime? created_at,  DateTime? updated_at,  String? status_name,  AdminModel? admin,  TypeModel? type,  List<dynamic>? questions)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _CourseModel() when $default != null:
+return $default(_that.id,_that.name,_that.type_id,_that.level_id,_that.max_persons,_that.active_booking_count,_that.price,_that.date_from,_that.date_to,_that.start_time,_that.end_time,_that.color_code,_that.period,_that.admin_id,_that.salle_id,_that.description,_that.status,_that.created_at,_that.updated_at,_that.status_name,_that.admin,_that.type,_that.questions);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? id,  String? name,  int? type_id,  int? level_id,  int? max_persons,  int? active_booking_count,  double? price,  String? date_from,  String? date_to,  String? start_time,  String? end_time,  String? color_code,  List<int>? period,  String? admin_id,  String? salle_id,  String? description,  int? status,  DateTime? created_at,  DateTime? updated_at,  String? status_name,  AdminModel? admin,  TypeModel? type,  List<dynamic>? questions)  $default,) {final _that = this;
+switch (_that) {
+case _CourseModel():
+return $default(_that.id,_that.name,_that.type_id,_that.level_id,_that.max_persons,_that.active_booking_count,_that.price,_that.date_from,_that.date_to,_that.start_time,_that.end_time,_that.color_code,_that.period,_that.admin_id,_that.salle_id,_that.description,_that.status,_that.created_at,_that.updated_at,_that.status_name,_that.admin,_that.type,_that.questions);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? id,  String? name,  int? type_id,  int? level_id,  int? max_persons,  int? active_booking_count,  double? price,  String? date_from,  String? date_to,  String? start_time,  String? end_time,  String? color_code,  List<int>? period,  String? admin_id,  String? salle_id,  String? description,  int? status,  DateTime? created_at,  DateTime? updated_at,  String? status_name,  AdminModel? admin,  TypeModel? type,  List<dynamic>? questions)?  $default,) {final _that = this;
+switch (_that) {
+case _CourseModel() when $default != null:
+return $default(_that.id,_that.name,_that.type_id,_that.level_id,_that.max_persons,_that.active_booking_count,_that.price,_that.date_from,_that.date_to,_that.start_time,_that.end_time,_that.color_code,_that.period,_that.admin_id,_that.salle_id,_that.description,_that.status,_that.created_at,_that.updated_at,_that.status_name,_that.admin,_that.type,_that.questions);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$_CourseModelCopyWithImpl<$Res>
-    extends _$CourseModelCopyWithImpl<$Res, _$_CourseModel>
-    implements _$$_CourseModelCopyWith<$Res> {
-  __$$_CourseModelCopyWithImpl(
-      _$_CourseModel _value, $Res Function(_$_CourseModel) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? type_id = freezed,
-    Object? level_id = freezed,
-    Object? max_persons = freezed,
-    Object? active_booking_count = freezed,
-    Object? price = freezed,
-    Object? date_from = freezed,
-    Object? date_to = freezed,
-    Object? start_time = freezed,
-    Object? end_time = freezed,
-    Object? color_code = freezed,
-    Object? period = freezed,
-    Object? admin_id = freezed,
-    Object? salle_id = freezed,
-    Object? description = freezed,
-    Object? status = freezed,
-    Object? created_at = freezed,
-    Object? updated_at = freezed,
-    Object? status_name = freezed,
-    Object? admin = freezed,
-    Object? type = freezed,
-    Object? questions = freezed,
-  }) {
-    return _then(_$_CourseModel(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      type_id: freezed == type_id
-          ? _value.type_id
-          : type_id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      level_id: freezed == level_id
-          ? _value.level_id
-          : level_id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      max_persons: freezed == max_persons
-          ? _value.max_persons
-          : max_persons // ignore: cast_nullable_to_non_nullable
-              as int?,
-      active_booking_count: freezed == active_booking_count
-          ? _value.active_booking_count
-          : active_booking_count // ignore: cast_nullable_to_non_nullable
-              as int?,
-      price: freezed == price
-          ? _value.price
-          : price // ignore: cast_nullable_to_non_nullable
-              as double?,
-      date_from: freezed == date_from
-          ? _value.date_from
-          : date_from // ignore: cast_nullable_to_non_nullable
-              as String?,
-      date_to: freezed == date_to
-          ? _value.date_to
-          : date_to // ignore: cast_nullable_to_non_nullable
-              as String?,
-      start_time: freezed == start_time
-          ? _value.start_time
-          : start_time // ignore: cast_nullable_to_non_nullable
-              as String?,
-      end_time: freezed == end_time
-          ? _value.end_time
-          : end_time // ignore: cast_nullable_to_non_nullable
-              as String?,
-      color_code: freezed == color_code
-          ? _value.color_code
-          : color_code // ignore: cast_nullable_to_non_nullable
-              as String?,
-      period: freezed == period
-          ? _value._period
-          : period // ignore: cast_nullable_to_non_nullable
-              as List<int>?,
-      admin_id: freezed == admin_id
-          ? _value.admin_id
-          : admin_id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      salle_id: freezed == salle_id
-          ? _value.salle_id
-          : salle_id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      status: freezed == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as int?,
-      created_at: freezed == created_at
-          ? _value.created_at
-          : created_at // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      updated_at: freezed == updated_at
-          ? _value.updated_at
-          : updated_at // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      status_name: freezed == status_name
-          ? _value.status_name
-          : status_name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      admin: freezed == admin
-          ? _value.admin
-          : admin // ignore: cast_nullable_to_non_nullable
-              as AdminModel?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as TypeModel?,
-      questions: freezed == questions
-          ? _value._questions
-          : questions // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_CourseModel implements _CourseModel {
-  const _$_CourseModel(
-      {this.id,
-      this.name,
-      this.type_id,
-      this.level_id,
-      this.max_persons,
-      this.active_booking_count,
-      this.price,
-      this.date_from,
-      this.date_to,
-      this.start_time,
-      this.end_time,
-      this.color_code,
-      final List<int>? period,
-      this.admin_id,
-      this.salle_id,
-      this.description,
-      this.status,
-      this.created_at,
-      this.updated_at,
-      this.status_name,
-      this.admin,
-      this.type,
-      final List<dynamic>? questions})
-      : _period = period,
-        _questions = questions;
 
-  factory _$_CourseModel.fromJson(Map<String, dynamic> json) =>
-      _$$_CourseModelFromJson(json);
+class _CourseModel implements CourseModel {
+  const _CourseModel({this.id, this.name, this.type_id, this.level_id, this.max_persons, this.active_booking_count, this.price, this.date_from, this.date_to, this.start_time, this.end_time, this.color_code, final  List<int>? period, this.admin_id, this.salle_id, this.description, this.status, this.created_at, this.updated_at, this.status_name, this.admin, this.type, final  List<dynamic>? questions}): _period = period,_questions = questions;
+  factory _CourseModel.fromJson(Map<String, dynamic> json) => _$CourseModelFromJson(json);
 
-  @override
-  final int? id;
-  @override
-  final String? name;
-  @override
-  final int? type_id;
-  @override
-  final int? level_id;
-  @override
-  final int? max_persons;
-  @override
-  final int? active_booking_count;
-  @override
-  final double? price;
-  @override
-  final String? date_from;
-  @override
-  final String? date_to;
-  @override
-  final String? start_time;
-  @override
-  final String? end_time;
-  @override
-  final String? color_code;
-  final List<int>? _period;
-  @override
-  List<int>? get period {
-    final value = _period;
-    if (value == null) return null;
-    if (_period is EqualUnmodifiableListView) return _period;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final String? admin_id;
-  @override
-  final String? salle_id;
-  @override
-  final String? description;
-  @override
-  final int? status;
-  @override
-  final DateTime? created_at;
-  @override
-  final DateTime? updated_at;
-  @override
-  final String? status_name;
-  @override
-  final AdminModel? admin;
-  @override
-  final TypeModel? type;
-  final List<dynamic>? _questions;
-  @override
-  List<dynamic>? get questions {
-    final value = _questions;
-    if (value == null) return null;
-    if (_questions is EqualUnmodifiableListView) return _questions;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  String toString() {
-    return 'CourseModel(id: $id, name: $name, type_id: $type_id, level_id: $level_id, max_persons: $max_persons, active_booking_count: $active_booking_count, price: $price, date_from: $date_from, date_to: $date_to, start_time: $start_time, end_time: $end_time, color_code: $color_code, period: $period, admin_id: $admin_id, salle_id: $salle_id, description: $description, status: $status, created_at: $created_at, updated_at: $updated_at, status_name: $status_name, admin: $admin, type: $type, questions: $questions)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_CourseModel &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.type_id, type_id) || other.type_id == type_id) &&
-            (identical(other.level_id, level_id) ||
-                other.level_id == level_id) &&
-            (identical(other.max_persons, max_persons) ||
-                other.max_persons == max_persons) &&
-            (identical(other.active_booking_count, active_booking_count) ||
-                other.active_booking_count == active_booking_count) &&
-            (identical(other.price, price) || other.price == price) &&
-            (identical(other.date_from, date_from) ||
-                other.date_from == date_from) &&
-            (identical(other.date_to, date_to) || other.date_to == date_to) &&
-            (identical(other.start_time, start_time) ||
-                other.start_time == start_time) &&
-            (identical(other.end_time, end_time) ||
-                other.end_time == end_time) &&
-            (identical(other.color_code, color_code) ||
-                other.color_code == color_code) &&
-            const DeepCollectionEquality().equals(other._period, _period) &&
-            (identical(other.admin_id, admin_id) ||
-                other.admin_id == admin_id) &&
-            (identical(other.salle_id, salle_id) ||
-                other.salle_id == salle_id) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.created_at, created_at) ||
-                other.created_at == created_at) &&
-            (identical(other.updated_at, updated_at) ||
-                other.updated_at == updated_at) &&
-            (identical(other.status_name, status_name) ||
-                other.status_name == status_name) &&
-            (identical(other.admin, admin) || other.admin == admin) &&
-            (identical(other.type, type) || other.type == type) &&
-            const DeepCollectionEquality()
-                .equals(other._questions, _questions));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        name,
-        type_id,
-        level_id,
-        max_persons,
-        active_booking_count,
-        price,
-        date_from,
-        date_to,
-        start_time,
-        end_time,
-        color_code,
-        const DeepCollectionEquality().hash(_period),
-        admin_id,
-        salle_id,
-        description,
-        status,
-        created_at,
-        updated_at,
-        status_name,
-        admin,
-        type,
-        const DeepCollectionEquality().hash(_questions)
-      ]);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_CourseModelCopyWith<_$_CourseModel> get copyWith =>
-      __$$_CourseModelCopyWithImpl<_$_CourseModel>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_CourseModelToJson(
-      this,
-    );
-  }
+@override final  int? id;
+@override final  String? name;
+@override final  int? type_id;
+@override final  int? level_id;
+@override final  int? max_persons;
+@override final  int? active_booking_count;
+@override final  double? price;
+@override final  String? date_from;
+@override final  String? date_to;
+@override final  String? start_time;
+@override final  String? end_time;
+@override final  String? color_code;
+ final  List<int>? _period;
+@override List<int>? get period {
+  final value = _period;
+  if (value == null) return null;
+  if (_period is EqualUnmodifiableListView) return _period;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
 }
 
-abstract class _CourseModel implements CourseModel {
-  const factory _CourseModel(
-      {final int? id,
-      final String? name,
-      final int? type_id,
-      final int? level_id,
-      final int? max_persons,
-      final int? active_booking_count,
-      final double? price,
-      final String? date_from,
-      final String? date_to,
-      final String? start_time,
-      final String? end_time,
-      final String? color_code,
-      final List<int>? period,
-      final String? admin_id,
-      final String? salle_id,
-      final String? description,
-      final int? status,
-      final DateTime? created_at,
-      final DateTime? updated_at,
-      final String? status_name,
-      final AdminModel? admin,
-      final TypeModel? type,
-      final List<dynamic>? questions}) = _$_CourseModel;
-
-  factory _CourseModel.fromJson(Map<String, dynamic> json) =
-      _$_CourseModel.fromJson;
-
-  @override
-  int? get id;
-  @override
-  String? get name;
-  @override
-  int? get type_id;
-  @override
-  int? get level_id;
-  @override
-  int? get max_persons;
-  @override
-  int? get active_booking_count;
-  @override
-  double? get price;
-  @override
-  String? get date_from;
-  @override
-  String? get date_to;
-  @override
-  String? get start_time;
-  @override
-  String? get end_time;
-  @override
-  String? get color_code;
-  @override
-  List<int>? get period;
-  @override
-  String? get admin_id;
-  @override
-  String? get salle_id;
-  @override
-  String? get description;
-  @override
-  int? get status;
-  @override
-  DateTime? get created_at;
-  @override
-  DateTime? get updated_at;
-  @override
-  String? get status_name;
-  @override
-  AdminModel? get admin;
-  @override
-  TypeModel? get type;
-  @override
-  List<dynamic>? get questions;
-  @override
-  @JsonKey(ignore: true)
-  _$$_CourseModelCopyWith<_$_CourseModel> get copyWith =>
-      throw _privateConstructorUsedError;
+@override final  String? admin_id;
+@override final  String? salle_id;
+@override final  String? description;
+@override final  int? status;
+@override final  DateTime? created_at;
+@override final  DateTime? updated_at;
+@override final  String? status_name;
+@override final  AdminModel? admin;
+@override final  TypeModel? type;
+ final  List<dynamic>? _questions;
+@override List<dynamic>? get questions {
+  final value = _questions;
+  if (value == null) return null;
+  if (_questions is EqualUnmodifiableListView) return _questions;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
 }
+
+
+/// Create a copy of CourseModel
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$CourseModelCopyWith<_CourseModel> get copyWith => __$CourseModelCopyWithImpl<_CourseModel>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$CourseModelToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CourseModel&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.type_id, type_id) || other.type_id == type_id)&&(identical(other.level_id, level_id) || other.level_id == level_id)&&(identical(other.max_persons, max_persons) || other.max_persons == max_persons)&&(identical(other.active_booking_count, active_booking_count) || other.active_booking_count == active_booking_count)&&(identical(other.price, price) || other.price == price)&&(identical(other.date_from, date_from) || other.date_from == date_from)&&(identical(other.date_to, date_to) || other.date_to == date_to)&&(identical(other.start_time, start_time) || other.start_time == start_time)&&(identical(other.end_time, end_time) || other.end_time == end_time)&&(identical(other.color_code, color_code) || other.color_code == color_code)&&const DeepCollectionEquality().equals(other._period, _period)&&(identical(other.admin_id, admin_id) || other.admin_id == admin_id)&&(identical(other.salle_id, salle_id) || other.salle_id == salle_id)&&(identical(other.description, description) || other.description == description)&&(identical(other.status, status) || other.status == status)&&(identical(other.created_at, created_at) || other.created_at == created_at)&&(identical(other.updated_at, updated_at) || other.updated_at == updated_at)&&(identical(other.status_name, status_name) || other.status_name == status_name)&&(identical(other.admin, admin) || other.admin == admin)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other._questions, _questions));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hashAll([runtimeType,id,name,type_id,level_id,max_persons,active_booking_count,price,date_from,date_to,start_time,end_time,color_code,const DeepCollectionEquality().hash(_period),admin_id,salle_id,description,status,created_at,updated_at,status_name,admin,type,const DeepCollectionEquality().hash(_questions)]);
+
+@override
+String toString() {
+  return 'CourseModel(id: $id, name: $name, type_id: $type_id, level_id: $level_id, max_persons: $max_persons, active_booking_count: $active_booking_count, price: $price, date_from: $date_from, date_to: $date_to, start_time: $start_time, end_time: $end_time, color_code: $color_code, period: $period, admin_id: $admin_id, salle_id: $salle_id, description: $description, status: $status, created_at: $created_at, updated_at: $updated_at, status_name: $status_name, admin: $admin, type: $type, questions: $questions)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$CourseModelCopyWith<$Res> implements $CourseModelCopyWith<$Res> {
+  factory _$CourseModelCopyWith(_CourseModel value, $Res Function(_CourseModel) _then) = __$CourseModelCopyWithImpl;
+@override @useResult
+$Res call({
+ int? id, String? name, int? type_id, int? level_id, int? max_persons, int? active_booking_count, double? price, String? date_from, String? date_to, String? start_time, String? end_time, String? color_code, List<int>? period, String? admin_id, String? salle_id, String? description, int? status, DateTime? created_at, DateTime? updated_at, String? status_name, AdminModel? admin, TypeModel? type, List<dynamic>? questions
+});
+
+
+@override $AdminModelCopyWith<$Res>? get admin;@override $TypeModelCopyWith<$Res>? get type;
+
+}
+/// @nodoc
+class __$CourseModelCopyWithImpl<$Res>
+    implements _$CourseModelCopyWith<$Res> {
+  __$CourseModelCopyWithImpl(this._self, this._then);
+
+  final _CourseModel _self;
+  final $Res Function(_CourseModel) _then;
+
+/// Create a copy of CourseModel
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = freezed,Object? name = freezed,Object? type_id = freezed,Object? level_id = freezed,Object? max_persons = freezed,Object? active_booking_count = freezed,Object? price = freezed,Object? date_from = freezed,Object? date_to = freezed,Object? start_time = freezed,Object? end_time = freezed,Object? color_code = freezed,Object? period = freezed,Object? admin_id = freezed,Object? salle_id = freezed,Object? description = freezed,Object? status = freezed,Object? created_at = freezed,Object? updated_at = freezed,Object? status_name = freezed,Object? admin = freezed,Object? type = freezed,Object? questions = freezed,}) {
+  return _then(_CourseModel(
+id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int?,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String?,type_id: freezed == type_id ? _self.type_id : type_id // ignore: cast_nullable_to_non_nullable
+as int?,level_id: freezed == level_id ? _self.level_id : level_id // ignore: cast_nullable_to_non_nullable
+as int?,max_persons: freezed == max_persons ? _self.max_persons : max_persons // ignore: cast_nullable_to_non_nullable
+as int?,active_booking_count: freezed == active_booking_count ? _self.active_booking_count : active_booking_count // ignore: cast_nullable_to_non_nullable
+as int?,price: freezed == price ? _self.price : price // ignore: cast_nullable_to_non_nullable
+as double?,date_from: freezed == date_from ? _self.date_from : date_from // ignore: cast_nullable_to_non_nullable
+as String?,date_to: freezed == date_to ? _self.date_to : date_to // ignore: cast_nullable_to_non_nullable
+as String?,start_time: freezed == start_time ? _self.start_time : start_time // ignore: cast_nullable_to_non_nullable
+as String?,end_time: freezed == end_time ? _self.end_time : end_time // ignore: cast_nullable_to_non_nullable
+as String?,color_code: freezed == color_code ? _self.color_code : color_code // ignore: cast_nullable_to_non_nullable
+as String?,period: freezed == period ? _self._period : period // ignore: cast_nullable_to_non_nullable
+as List<int>?,admin_id: freezed == admin_id ? _self.admin_id : admin_id // ignore: cast_nullable_to_non_nullable
+as String?,salle_id: freezed == salle_id ? _self.salle_id : salle_id // ignore: cast_nullable_to_non_nullable
+as String?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
+as String?,status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
+as int?,created_at: freezed == created_at ? _self.created_at : created_at // ignore: cast_nullable_to_non_nullable
+as DateTime?,updated_at: freezed == updated_at ? _self.updated_at : updated_at // ignore: cast_nullable_to_non_nullable
+as DateTime?,status_name: freezed == status_name ? _self.status_name : status_name // ignore: cast_nullable_to_non_nullable
+as String?,admin: freezed == admin ? _self.admin : admin // ignore: cast_nullable_to_non_nullable
+as AdminModel?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as TypeModel?,questions: freezed == questions ? _self._questions : questions // ignore: cast_nullable_to_non_nullable
+as List<dynamic>?,
+  ));
+}
+
+/// Create a copy of CourseModel
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$AdminModelCopyWith<$Res>? get admin {
+    if (_self.admin == null) {
+    return null;
+  }
+
+  return $AdminModelCopyWith<$Res>(_self.admin!, (value) {
+    return _then(_self.copyWith(admin: value));
+  });
+}/// Create a copy of CourseModel
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$TypeModelCopyWith<$Res>? get type {
+    if (_self.type == null) {
+    return null;
+  }
+
+  return $TypeModelCopyWith<$Res>(_self.type!, (value) {
+    return _then(_self.copyWith(type: value));
+  });
+}
+}
+
+// dart format on

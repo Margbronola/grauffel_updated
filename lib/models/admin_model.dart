@@ -7,7 +7,7 @@ part 'admin_model.freezed.dart';
 part 'admin_model.g.dart';
 
 @freezed
-class AdminModel with _$AdminModel {
+abstract class AdminModel with _$AdminModel {
   const factory AdminModel({
     int? id,
     String? first_name,

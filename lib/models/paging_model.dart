@@ -5,7 +5,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'paging_model.freezed.dart';
 
 @freezed
-class PagingModel with _$PagingModel {
+abstract class PagingModel with _$PagingModel {
   const factory PagingModel(
       {int? current_page,
       String? first_page_url,

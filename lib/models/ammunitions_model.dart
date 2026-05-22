@@ -9,7 +9,7 @@ part 'ammunitions_model.freezed.dart';
 part 'ammunitions_model.g.dart';
 
 @freezed
-class AmmunitionsModel with _$AmmunitionsModel {
+abstract class AmmunitionsModel with _$AmmunitionsModel {
   const factory AmmunitionsModel({
     int? id,
     String? name,

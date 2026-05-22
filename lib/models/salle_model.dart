@@ -7,7 +7,7 @@ part 'salle_model.freezed.dart';
 part 'salle_model.g.dart';
 
 @freezed
-class SalleModel with _$SalleModel {
+abstract class SalleModel with _$SalleModel {
   const factory SalleModel({
     int? id,
     String? name,

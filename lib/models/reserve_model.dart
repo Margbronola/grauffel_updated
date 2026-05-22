@@ -7,7 +7,7 @@ part 'reserve_model.freezed.dart';
 part 'reserve_model.g.dart';
 
 @freezed
-class ReserveModel with _$ReserveModel {
+abstract class ReserveModel with _$ReserveModel {
   const factory ReserveModel({
     String? image,
     String? title,

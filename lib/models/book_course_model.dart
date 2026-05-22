@@ -10,7 +10,7 @@ part 'book_course_model.freezed.dart';
 part 'book_course_model.g.dart';
 
 @freezed
-class BookCourseModel with _$BookCourseModel {
+abstract class BookCourseModel with _$BookCourseModel {
   const factory BookCourseModel(
       {int? course_id,
       List<GunModel>? guns,

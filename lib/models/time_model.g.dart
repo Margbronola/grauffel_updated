@@ -6,13 +6,15 @@ part of 'time_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TimeModel _$$_TimeModelFromJson(Map<String, dynamic> json) => _$_TimeModel(
-      time: json['time'] as String?,
-      available: json['available'] as int?,
-    );
+_TimeModel _$TimeModelFromJson(Map<String, dynamic> json) => _TimeModel(
+  time: json['time'] as String?,
+  available: (json['available'] as num?)?.toInt(),
+  past: json['past'] as bool?,
+);
 
-Map<String, dynamic> _$$_TimeModelToJson(_$_TimeModel instance) =>
+Map<String, dynamic> _$TimeModelToJson(_TimeModel instance) =>
     <String, dynamic>{
       'time': instance.time,
       'available': instance.available,
+      'past': instance.past,
     };

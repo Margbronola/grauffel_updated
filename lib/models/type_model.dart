@@ -6,7 +6,7 @@ part 'type_model.freezed.dart';
 part 'type_model.g.dart';
 
 @freezed
-class TypeModel with _$TypeModel {
+abstract class TypeModel with _$TypeModel {
   const factory TypeModel(
       {int? id,
       String? name,

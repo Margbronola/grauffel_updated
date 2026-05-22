@@ -14,7 +14,7 @@ import 'user_api_service.dart';
 
 class LocalNotificationService {
   static final FlutterLocalNotificationsPlugin
-      _flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+  _flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
   final BehaviorSubject<String> behaviorSubject = BehaviorSubject();
 
   initialize() async {
@@ -22,17 +22,17 @@ class LocalNotificationService {
         AndroidInitializationSettings('@mipmap/ic_launcher');
     const DarwinInitializationSettings initializationSettingsDarwin =
         DarwinInitializationSettings(
-      requestSoundPermission: false,
-      requestBadgePermission: false,
-      requestAlertPermission: false,
-    );
+          requestSoundPermission: false,
+          requestBadgePermission: false,
+          requestAlertPermission: false,
+        );
     const InitializationSettings initializationSettings =
         InitializationSettings(
-      android: initializationSettingsAndroid,
-      iOS: initializationSettingsDarwin,
-    );
+          android: initializationSettingsAndroid,
+          iOS: initializationSettingsDarwin,
+        );
     await _flutterLocalNotificationsPlugin.initialize(
-      initializationSettings,
+      settings: initializationSettings,
       onDidReceiveNotificationResponse: onSelectNotification,
       onDidReceiveBackgroundNotificationResponse: onSelectNotification,
     );
@@ -50,7 +50,9 @@ class LocalNotificationService {
   }
 
   static Future<void> requestPermissions(
-      UserAPIService userAPIService, String token) async {
+    UserAPIService userAPIService,
+    String token,
+  ) async {
     print("PERMISSIONS CHECKING");
     FirebaseMessaging messaging = FirebaseMessaging.instance;
     NotificationSettings settings = await messaging.requestPermission(
@@ -104,10 +106,10 @@ class LocalNotificationService {
     );
 
     await _flutterLocalNotificationsPlugin.show(
-      notification.hashCode,
-      notification.notification!.title,
-      notification.notification!.body,
-      NotificationDetails(
+      id: notification.hashCode,
+      title: notification.notification!.title,
+      body: notification.notification!.body,
+      notificationDetails: NotificationDetails(
         // iOS: DarwinNotificationDetails(attachments: [
         //   DarwinNotificationAttachment(
         //       "https://back.eg-czacademy.com/images/${notification.notification!.apple?.imageUrl}")

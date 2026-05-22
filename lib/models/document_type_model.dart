@@ -6,7 +6,7 @@ part 'document_type_model.freezed.dart';
 part 'document_type_model.g.dart';
 
 @freezed
-class DocumentTypeModel with _$DocumentTypeModel {
+abstract class DocumentTypeModel with _$DocumentTypeModel {
   const factory DocumentTypeModel(
       {int? id,
       String? name,

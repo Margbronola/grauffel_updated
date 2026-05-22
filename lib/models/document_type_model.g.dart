@@ -6,13 +6,13 @@ part of 'document_type_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DocumentTypeModel _$$_DocumentTypeModelFromJson(Map<String, dynamic> json) =>
-    _$_DocumentTypeModel(
-      id: json['id'] as int?,
+_DocumentTypeModel _$DocumentTypeModelFromJson(Map<String, dynamic> json) =>
+    _DocumentTypeModel(
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       description: json['description'] as String?,
-      type: json['type'] as int?,
-      ismandatory: json['ismandatory'] as int?,
+      type: (json['type'] as num?)?.toInt(),
+      ismandatory: (json['ismandatory'] as num?)?.toInt(),
       created_at: json['created_at'] == null
           ? null
           : DateTime.parse(json['created_at'] as String),
@@ -21,8 +21,7 @@ _$_DocumentTypeModel _$$_DocumentTypeModelFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['updated_at'] as String),
     );
 
-Map<String, dynamic> _$$_DocumentTypeModelToJson(
-        _$_DocumentTypeModel instance) =>
+Map<String, dynamic> _$DocumentTypeModelToJson(_DocumentTypeModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

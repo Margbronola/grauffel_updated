@@ -6,9 +6,9 @@ part of 'caliber_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CaliberModel _$$_CaliberModelFromJson(Map<String, dynamic> json) =>
-    _$_CaliberModel(
-      id: json['id'] as int?,
+_CaliberModel _$CaliberModelFromJson(Map<String, dynamic> json) =>
+    _CaliberModel(
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       metric: json['metric'] as String?,
       typicalBulletDiameter: json['typicalBulletDiameter'] as String?,
@@ -16,7 +16,7 @@ _$_CaliberModel _$$_CaliberModelFromJson(Map<String, dynamic> json) =>
       updatedAt: json['updatedAt'] as String?,
     );
 
-Map<String, dynamic> _$$_CaliberModelToJson(_$_CaliberModel instance) =>
+Map<String, dynamic> _$CaliberModelToJson(_CaliberModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

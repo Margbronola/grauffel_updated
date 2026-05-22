@@ -6,7 +6,7 @@ part 'subscription_type_model.freezed.dart';
 part 'subscription_type_model.g.dart';
 
 @freezed
-class SubscriptionTypeModel with _$SubscriptionTypeModel {
+abstract class SubscriptionTypeModel with _$SubscriptionTypeModel {
   const factory SubscriptionTypeModel(
       {int? id,
       String? name,

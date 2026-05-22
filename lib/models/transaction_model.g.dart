@@ -6,10 +6,10 @@ part of 'transaction_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TransactionModel _$$_TransactionModelFromJson(Map<String, dynamic> json) =>
-    _$_TransactionModel(
-      id: json['id'] as int?,
-      client_id: json['client_id'] as int?,
+_TransactionModel _$TransactionModelFromJson(Map<String, dynamic> json) =>
+    _TransactionModel(
+      id: (json['id'] as num?)?.toInt(),
+      client_id: (json['client_id'] as num?)?.toInt(),
       first_name: json['first_name'] as String?,
       last_name: json['last_name'] as String?,
       email: json['email'] as String?,
@@ -19,10 +19,10 @@ _$_TransactionModel _$$_TransactionModelFromJson(Map<String, dynamic> json) =>
       zipcode: json['zipcode'] as String?,
       package_name: json['package_name'] as String?,
       purchase_token: json['purchase_token'] as String?,
-      uuid: json['uuid'] as int?,
-      transaction_id: json['transaction_id'] as int?,
-      booking_id: json['booking_id'] as int?,
-      client_subscription_id: json['client_subscription_id'] as int?,
+      uuid: (json['uuid'] as num?)?.toInt(),
+      transaction_id: (json['transaction_id'] as num?)?.toInt(),
+      booking_id: (json['booking_id'] as num?)?.toInt(),
+      client_subscription_id: (json['client_subscription_id'] as num?)?.toInt(),
       subscription_name: json['subscription_name'] as String?,
       ammunition_discount: (json['ammunition_discount'] as num?)?.toDouble(),
       equipment_discount: (json['equipment_discount'] as num?)?.toDouble(),
@@ -30,14 +30,14 @@ _$_TransactionModel _$$_TransactionModelFromJson(Map<String, dynamic> json) =>
       price_per_hour: (json['price_per_hour'] as num?)?.toDouble(),
       ook_cost: (json['ook_cost'] as num?)?.toDouble(),
       total_gun_cost: (json['total_gun_cost'] as num?)?.toDouble(),
-      total_ammunition_cost:
-          (json['total_ammunition_cost'] as num?)?.toDouble(),
+      total_ammunition_cost: (json['total_ammunition_cost'] as num?)
+          ?.toDouble(),
       total_equipment_cost: (json['total_equipment_cost'] as num?)?.toDouble(),
       sub_total: (json['sub_total'] as num?)?.toDouble(),
       total_discount: (json['total_discount'] as num?)?.toDouble(),
       purchase_number: json['purchase_number'] as String?,
       purchase_name: json['purchase_name'] as String?,
-      status: json['status'] as int?,
+      status: (json['status'] as num?)?.toInt(),
       price: (json['price'] as num?)?.toDouble(),
       tax_included: (json['tax_included'] as num?)?.toDouble(),
       tax: (json['tax'] as num?)?.toDouble(),
@@ -50,7 +50,7 @@ _$_TransactionModel _$$_TransactionModelFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['updated_at'] as String),
     );
 
-Map<String, dynamic> _$$_TransactionModelToJson(_$_TransactionModel instance) =>
+Map<String, dynamic> _$TransactionModelToJson(_TransactionModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'client_id': instance.client_id,

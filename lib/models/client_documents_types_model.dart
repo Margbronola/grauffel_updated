@@ -6,7 +6,7 @@ part 'client_documents_types_model.freezed.dart';
 part 'client_documents_types_model.g.dart';
 
 @freezed
-class ClientDocumentsTypesModel with _$ClientDocumentsTypesModel {
+abstract class ClientDocumentsTypesModel with _$ClientDocumentsTypesModel {
   const factory ClientDocumentsTypesModel({
     int? id,
     String? name,

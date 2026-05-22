@@ -6,11 +6,12 @@ part of 'document_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DocumentModel _$$_DocumentModelFromJson(Map<String, dynamic> json) =>
-    _$_DocumentModel(
-      id: json['id'] as int?,
-      client_id: json['client_id'] as int?,
-      client_document_type_id: json['client_document_type_id'] as int?,
+_DocumentModel _$DocumentModelFromJson(Map<String, dynamic> json) =>
+    _DocumentModel(
+      id: (json['id'] as num?)?.toInt(),
+      client_id: (json['client_id'] as num?)?.toInt(),
+      client_document_type_id: (json['client_document_type_id'] as num?)
+          ?.toInt(),
       image_base64_front: json['image_base64_front'] as String?,
       image_base64_back: json['image_base64_back'] as String?,
       path: json['path'] as String?,
@@ -19,19 +20,20 @@ _$_DocumentModel _$$_DocumentModelFromJson(Map<String, dynamic> json) =>
       created_at: json['created_at'] == null
           ? null
           : DateTime.parse(json['created_at'] as String),
-      is_valid: json['is_valid'] as int?,
-      is_new: json['is_new'] as int?,
-      is_viewed: json['is_viewed'] as int?,
+      is_valid: (json['is_valid'] as num?)?.toInt(),
+      is_new: (json['is_new'] as num?)?.toInt(),
+      is_viewed: (json['is_viewed'] as num?)?.toInt(),
       client_document_types: json['client_document_types'] == null
           ? null
           : ClientDocumentsTypesModel.fromJson(
-              json['client_document_types'] as Map<String, dynamic>),
+              json['client_document_types'] as Map<String, dynamic>,
+            ),
       updated_at: json['updated_at'] == null
           ? null
           : DateTime.parse(json['updated_at'] as String),
     );
 
-Map<String, dynamic> _$$_DocumentModelToJson(_$_DocumentModel instance) =>
+Map<String, dynamic> _$DocumentModelToJson(_DocumentModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'client_id': instance.client_id,

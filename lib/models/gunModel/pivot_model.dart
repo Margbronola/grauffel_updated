@@ -5,7 +5,7 @@ part 'pivot_model.freezed.dart';
 part 'pivot_model.g.dart';
 
 @freezed
-class PivotModel with _$PivotModel {
+abstract class PivotModel with _$PivotModel {
   const factory PivotModel({
     int? booking_id,
     int? equipement_id,

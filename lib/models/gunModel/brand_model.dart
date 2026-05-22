@@ -6,7 +6,7 @@ part 'brand_model.freezed.dart';
 part 'brand_model.g.dart';
 
 @freezed
-class BrandModel with _$BrandModel {
+abstract class BrandModel with _$BrandModel {
   const factory BrandModel(
       {int? id,
       String? name,

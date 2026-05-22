@@ -6,14 +6,14 @@ part of 'equipment_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_EquipmentModel _$$_EquipmentModelFromJson(Map<String, dynamic> json) =>
-    _$_EquipmentModel(
-      id: json['id'] as int?,
+_EquipmentModel _$EquipmentModelFromJson(Map<String, dynamic> json) =>
+    _EquipmentModel(
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       price: (json['price'] as num?)?.toDouble(),
       description: json['description'] as String?,
-      stocks: json['stocks'] as int?,
-      type: json['type'] as int?,
+      stocks: (json['stocks'] as num?)?.toInt(),
+      type: (json['type'] as num?)?.toInt(),
       pivot: json['pivot'] == null
           ? null
           : PivotModel.fromJson(json['pivot'] as Map<String, dynamic>),
@@ -26,13 +26,13 @@ _$_EquipmentModel _$$_EquipmentModelFromJson(Map<String, dynamic> json) =>
       brand: json['brand'] == null
           ? null
           : BrandModel.fromJson(json['brand'] as Map<String, dynamic>),
-      quantity: json['quantity'] as int? ?? 1,
-      qty: json['qty'] as int? ?? 1,
+      quantity: (json['quantity'] as num?)?.toInt() ?? 1,
+      qty: (json['qty'] as num?)?.toInt() ?? 1,
       image_url: json['image_url'] as String?,
       image_thumb_url: json['image_thumb_url'] as String?,
     );
 
-Map<String, dynamic> _$$_EquipmentModelToJson(_$_EquipmentModel instance) =>
+Map<String, dynamic> _$EquipmentModelToJson(_EquipmentModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

@@ -10,7 +10,7 @@ part 'book_cell_model.freezed.dart';
 part 'book_cell_model.g.dart';
 
 @freezed
-class BookCellModel with _$BookCellModel {
+abstract class BookCellModel with _$BookCellModel {
   const factory BookCellModel(
       {String? date,
       String? time,

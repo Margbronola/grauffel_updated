@@ -8,7 +8,7 @@ part 'activity_salle_model.freezed.dart';
 part 'activity_salle_model.g.dart';
 
 @freezed
-class ActivitySalleModel with _$ActivitySalleModel {
+abstract class ActivitySalleModel with _$ActivitySalleModel {
   const factory ActivitySalleModel({
     int? id,
     String? date_start,

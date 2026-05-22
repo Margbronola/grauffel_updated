@@ -6,8 +6,8 @@ part of 'reserve_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ReserveModel _$$_ReserveModelFromJson(Map<String, dynamic> json) =>
-    _$_ReserveModel(
+_ReserveModel _$ReserveModelFromJson(Map<String, dynamic> json) =>
+    _ReserveModel(
       image: json['image'] as String?,
       title: json['title'] as String?,
       description: json['description'] as String?,
@@ -16,13 +16,13 @@ _$_ReserveModel _$$_ReserveModelFromJson(Map<String, dynamic> json) =>
       startTime: json['startTime'] as String?,
       endTime: json['endTime'] as String?,
       instructor: json['instructor'] as String?,
-      restantes: json['restantes'] as int?,
+      restantes: (json['restantes'] as num?)?.toInt(),
       type: json['type'] == null
           ? null
           : TypeModel.fromJson(json['type'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ReserveModelToJson(_$_ReserveModel instance) =>
+Map<String, dynamic> _$ReserveModelToJson(_ReserveModel instance) =>
     <String, dynamic>{
       'image': instance.image,
       'title': instance.title,

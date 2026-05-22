@@ -6,17 +6,17 @@ part of 'activity_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ActivityModel _$$_ActivityModelFromJson(Map<String, dynamic> json) =>
-    _$_ActivityModel(
-      id: json['id'] as int?,
+_ActivityModel _$ActivityModelFromJson(Map<String, dynamic> json) =>
+    _ActivityModel(
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       description: json['description'] as String?,
-      capacity: json['capacity'] as int?,
+      capacity: (json['capacity'] as num?)?.toInt(),
       price: (json['price'] as num?)?.toDouble(),
-      free_duration: json['free_duration'] as int?,
-      course_duration: json['course_duration'] as int?,
-      competition_duration: json['competition_duration'] as int?,
-      status: json['status'] as int?,
+      free_duration: (json['free_duration'] as num?)?.toInt(),
+      course_duration: (json['course_duration'] as num?)?.toInt(),
+      competition_duration: (json['competition_duration'] as num?)?.toInt(),
+      status: (json['status'] as num?)?.toInt(),
       image: json['image'] as String?,
       created_at: json['created_at'] == null
           ? null
@@ -37,8 +37,8 @@ _$_ActivityModel _$$_ActivityModelFromJson(Map<String, dynamic> json) =>
       admin: json['admin'] == null
           ? null
           : AdminModel.fromJson(json['admin'] as Map<String, dynamic>),
-      max_persons: json['max_persons'] as int?,
-      active_booking_count: json['active_booking_count'] as int?,
+      max_persons: (json['max_persons'] as num?)?.toInt(),
+      active_booking_count: (json['active_booking_count'] as num?)?.toInt(),
       activitysalle: (json['activitysalle'] as List<dynamic>?)
           ?.map((e) => ActivitySalleModel.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -47,7 +47,7 @@ _$_ActivityModel _$$_ActivityModelFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ActivityModelToJson(_$_ActivityModel instance) =>
+Map<String, dynamic> _$ActivityModelToJson(_ActivityModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

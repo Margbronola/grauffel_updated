@@ -5,7 +5,7 @@ part 'caliber_model.freezed.dart';
 part 'caliber_model.g.dart';
 
 @freezed
-class CaliberModel with _$CaliberModel {
+ abstract class CaliberModel with _$CaliberModel {
   const factory CaliberModel({
     int? id,
     String? name,

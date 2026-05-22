@@ -17,208 +17,200 @@ class SelectDateView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<SelectDateViewModel>.reactive(
       onViewModelReady: (model) async => model.init(context),
-      builder:
-          (context, model, child) => Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      builder: (context, model, child) => Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  verticalSpaceSmall(),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 20.w,
-                      vertical: 4,
+              verticalSpaceSmall(),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 4),
+                child: Text(
+                  "Choisissez votre créneau",
+                  style: ThemeData().textTheme.headlineSmall!.copyWith(
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'ProductSans',
+                    color: backgroundColor,
+                    fontSize: 24.sp,
+                  ),
+                ),
+              ),
+              verticalSpaceMedium(),
+              Container(
+                color: customGrey,
+                height: 70.h,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
+                      onPressed: model.prevMonth,
+                      icon: const Icon(
+                        Icons.arrow_back_ios,
+                        color: Colors.black,
+                      ),
                     ),
-                    child: Text(
-                      "Choisissez votre créneau",
-                      style: ThemeData().textTheme.headlineSmall!.copyWith(
+                    Text(
+                      model.headerDate(),
+                      style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontFamily: 'ProductSans',
                         color: backgroundColor,
-                        fontSize: 24.sp,
+                        fontSize: 18.sp,
                       ),
                     ),
-                  ),
-                  verticalSpaceMedium(),
-                  Container(
-                    color: customGrey,
-                    height: 70.h,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        IconButton(
-                          onPressed: model.prevMonth,
-                          icon: const Icon(
-                            Icons.arrow_back_ios,
-                            color: Colors.black,
-                          ),
-                        ),
-                        Text(
-                          model.headerDate(),
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'ProductSans',
-                            color: backgroundColor,
-                            fontSize: 18.sp,
-                          ),
-                        ),
-                        IconButton(
-                          onPressed: model.forwardMonth,
-                          icon: const Icon(
-                            Icons.arrow_forward_ios,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    width: size(context).width,
-                    color: customGrey,
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 20.w,
-                      vertical: 10,
-                    ),
-                    child: SizedBox(
-                      height: 120.h,
-                      child: DatePicker(
-                        // DateTime.now(),
-                        model.currentDate,
-                        width: size(context).width * 0.17,
-                        initialSelectedDate: model.selectedDate,
-                        selectionColor: buttonColor,
-                        deactivatedColor: Colors.grey,
-                        selectedTextColor: Colors.white,
-                        monthTextStyle: const TextStyle(
-                          color: Colors.transparent,
-                        ),
-                        onDateChange: model.setDate,
-                        // inactiveDates: [DateTime.now()],
-                        locale: 'fr_FR',
-                        controller: model.controller,
-                        daysCount: model.numDaysTotal,
-                        dayTextStyle: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'ProductSans',
-                          color: backgroundColor,
-                          fontSize: 15.sp,
-                        ),
-                      ),
-                      // DatePicker(model.currentDate,
-                      //     // model.scrollController,
-                      //     width: size(context).width * 0.17,
-                      //     selectionColor: buttonColor,
-                      //     deactivatedColor: Colors.grey,
-                      //     selectedTextColor: Colors.white,
-                      //     onDateChange: model.setDate,
-                      //     inactiveDates: [DateTime.now()],
-                      //     initialSelectedDate: model.selectedDate,
-                      //     locale: 'fr_FR',
-                      // controller: model.controller,
-                      // daysCount: model.numDaysTotal,
-                      // dayTextStyle: TextStyle(
-                      //     fontWeight: FontWeight.bold,
-                      //     fontFamily: 'ProductSans',
-                      //     color: backgroundColor,
-                      //     fontSize: 15.sp)),
-                    ),
-                  ),
-                  model.isBusy
-                      ? SizedBox(
-                        height: 300.h,
-                        child: const Center(
-                          child: CircularProgressIndicator.adaptive(
-                            valueColor: AlwaysStoppedAnimation<Color>(
-                              Colors.black,
-                            ),
-                            backgroundColor: Colors.grey,
-                          ),
-                        ),
-                      )
-                      : Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 20,
-                          vertical: 10,
-                        ),
-                        height: 300.h,
-                        child: GridView.count(
-                          // Create a grid with 2 columns. If you change the scrollDirection to
-                          // horizontal, this produces 2 rows.
-                          crossAxisCount: 2,
-                          mainAxisSpacing: 5,
-                          crossAxisSpacing: 5,
-                          childAspectRatio: 2 / 0.5,
-                          children: List.generate(model.availableTimes.length, (
-                            index,
-                          ) {
-                            return time(
-                              selectedTime: model.selectedDate,
-                              avaiable: model.availableTimes[index].available!,
-                              onPress: () {
-                                model.selectTime(model.availableTimes[index]);
-                              },
-                              isSelected: model.isSelected(
-                                model.availableTimes[index],
-                              ),
-                              time: model.availableTimes[index].time!,
-                            );
-                          }),
-                        ),
-                      ),
-                ],
-              ),
-              model.selectedTime != null
-                  ? Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "${model.selectedTime!.available!} places ",
-                        style: TextStyle(
-                          color: buttonColor,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'ProductSans',
-                          fontSize: 18.sp,
-                        ),
-                      ),
-                      Text(
-                        "restantes",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'ProductSans',
-                          fontSize: 18.sp,
-                        ),
-                      ),
-                    ],
-                  )
-                  : const SizedBox(),
-              SizedBox(height: 5.h),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30.w),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    SizedBox(
-                      width: 150.w,
-                      child: CustomButton(
-                        title: "Suivant",
-                        onTap:
-                            model.selectedTime != null
-                                ? () {
-                                  onTap();
-                                }
-                                : null,
+                    IconButton(
+                      onPressed: model.forwardMonth,
+                      icon: const Icon(
+                        Icons.arrow_forward_ios,
+                        color: Colors.black,
                       ),
                     ),
                   ],
                 ),
               ),
-              verticalSpaceSmall(),
+              Container(
+                width: size(context).width,
+                color: customGrey,
+                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10),
+                child: SizedBox(
+                  height: 120.h,
+                  child: DatePicker(
+                    // DateTime.now(),
+                    model.currentDate,
+                    width: size(context).width * 0.17,
+                    initialSelectedDate: model.selectedDate,
+                    selectionColor: buttonColor,
+                    deactivatedColor: Colors.grey,
+                    selectedTextColor: Colors.white,
+                    monthTextStyle: const TextStyle(color: Colors.transparent),
+                    onDateChange: model.setDate,
+                    // inactiveDates: [DateTime.now()],
+                    locale: 'fr_FR',
+                    controller: model.controller,
+                    daysCount: model.numDaysTotal,
+                    dayTextStyle: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'ProductSans',
+                      color: backgroundColor,
+                      fontSize: 15.sp,
+                    ),
+                  ),
+                  // DatePicker(model.currentDate,
+                  //     // model.scrollController,
+                  //     width: size(context).width * 0.17,
+                  //     selectionColor: buttonColor,
+                  //     deactivatedColor: Colors.grey,
+                  //     selectedTextColor: Colors.white,
+                  //     onDateChange: model.setDate,
+                  //     inactiveDates: [DateTime.now()],
+                  //     initialSelectedDate: model.selectedDate,
+                  //     locale: 'fr_FR',
+                  // controller: model.controller,
+                  // daysCount: model.numDaysTotal,
+                  // dayTextStyle: TextStyle(
+                  //     fontWeight: FontWeight.bold,
+                  //     fontFamily: 'ProductSans',
+                  //     color: backgroundColor,
+                  //     fontSize: 15.sp)),
+                ),
+              ),
+              model.isBusy
+                  ? SizedBox(
+                      height: 300.h,
+                      child: const Center(
+                        child: CircularProgressIndicator.adaptive(
+                          valueColor: AlwaysStoppedAnimation<Color>(
+                            Colors.black,
+                          ),
+                          backgroundColor: Colors.grey,
+                        ),
+                      ),
+                    )
+                  : Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 10,
+                      ),
+                      height: 300.h,
+                      child: GridView.count(
+                        // Create a grid with 2 columns. If you change the scrollDirection to
+                        // horizontal, this produces 2 rows.
+                        crossAxisCount: 2,
+                        mainAxisSpacing: 5,
+                        crossAxisSpacing: 5,
+                        childAspectRatio: 2 / 0.5,
+                        children: List.generate(model.availableTimes.length, (
+                          index,
+                        ) {
+                          return time(
+                            selectedTime: model.selectedDate,
+                            avaiable: model.availableTimes[index].available!,
+                            past: model.availableTimes[index].past!,
+                            onPress: () {
+                              model.selectTime(model.availableTimes[index]);
+                            },
+                            isSelected: model.isSelected(
+                              model.availableTimes[index],
+                            ),
+                            time: model.availableTimes[index].time!,
+                          );
+                        }),
+                      ),
+                    ),
             ],
           ),
+          model.selectedTime != null
+              ? Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "${model.selectedTime!.available!} places ",
+                      style: TextStyle(
+                        color: buttonColor,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'ProductSans',
+                        fontSize: 18.sp,
+                      ),
+                    ),
+                    Text(
+                      "restantes",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'ProductSans',
+                        fontSize: 18.sp,
+                      ),
+                    ),
+                  ],
+                )
+              : const SizedBox(),
+          SizedBox(height: 5.h),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30.w),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                SizedBox(
+                  width: 150.w,
+                  child: CustomButton(
+                    title: "Suivant",
+                    onTap: model.selectedTime != null
+                        ? () {
+                            print("SELECTED TIME ${model.selectedTime}");
+                            onTap();
+                          }
+                        : null,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          verticalSpaceSmall(),
+        ],
+      ),
       viewModelBuilder: () => SelectDateViewModel(),
     );
   }
@@ -229,27 +221,29 @@ Widget time({
   required String time,
   required DateTime selectedTime,
   bool isSelected = false,
+  bool past = false,
   required Function() onPress,
 }) => SizedBox(
   height: 60,
   child: ElevatedButton(
     style: ElevatedButton.styleFrom(
       elevation: 0,
-      backgroundColor:
-          avaiable > 0
-              ? selectedTime.toUtc().isAfter(DateTime.now().toUtc()) ||
-                      selectedTime.toUtc().isAfter(DateTime.now().toUtc())
-                  ? isSelected
+      backgroundColor: past == true
+          ? Colors.transparent
+          : avaiable > 0
+          ? selectedTime.toUtc().isAfter(DateTime.now().toUtc()) ||
+                    selectedTime.toUtc().isAfter(DateTime.now().toUtc())
+                ? isSelected
                       ? buttonColor
                       : customGrey
-                  : DateTime.now().hour > int.parse(time.split(":")[0])
-                  ? isSelected
+                : DateTime.now().hour > int.parse(time.split(":")[0])
+                ? isSelected
                       ? buttonColor
                       : customGrey
-                  : isSelected
-                  ? buttonColor
-                  : customDarkGrey
-              : customDarkGrey,
+                : isSelected
+                ? buttonColor
+                : customDarkGrey
+          : customDarkGrey,
       padding: const EdgeInsets.all(10), // <-- Button color
     ),
     onPressed:
@@ -266,14 +260,16 @@ Widget time({
         //   print(DateTime.now().hour < int.parse(time.split(":")[0]));
         //   Fluttertoast.showToast(msg: "Can't book");
         // }
-        avaiable > 0
-            ? selectedTime.toUtc().isBefore(DateTime.now().toUtc()) ||
-                    selectedTime.toUtc().isAfter(DateTime.now().toUtc())
-                ? onPress
-                : DateTime.now().hour < int.parse(time.split(":")[0])
-                ? onPress
-                : () {}
-            : () {},
+        past == true
+        ? () {}
+        : avaiable > 0
+        ? selectedTime.toUtc().isBefore(DateTime.now().toUtc()) ||
+                  selectedTime.toUtc().isAfter(DateTime.now().toUtc())
+              ? onPress
+              : DateTime.now().hour < int.parse(time.split(":")[0])
+              ? onPress
+              : () {}
+        : () {},
 
     // },
     child: Text(
@@ -282,12 +278,13 @@ Widget time({
         fontWeight: FontWeight.bold,
         fontFamily: 'ProductSans',
         fontSize: 15.sp,
-        color:
-            isSelected
-                ? kcWhite
-                : avaiable > 0
-                ? backgroundColor
-                : customTextGrey,
+        color: past == true
+            ? customTextGrey
+            : isSelected
+            ? kcWhite
+            : avaiable > 0
+            ? backgroundColor
+            : customTextGrey,
       ),
     ),
   ),

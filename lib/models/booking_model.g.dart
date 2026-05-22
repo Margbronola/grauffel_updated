@@ -6,60 +6,58 @@ part of 'booking_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_BookingModel _$$_BookingModelFromJson(Map<String, dynamic> json) =>
-    _$_BookingModel(
-      id: json['id'] as int?,
-      bookable_id: json['bookable_id'] as int?,
-      name: json['name'] as String?,
-      client_id: json['client_id'] as int?,
-      activity_id: json['activity_id'] as int?,
-      description: json['description'] as String?,
-      start: json['start'] == null
-          ? null
-          : DateTime.parse(json['start'] as String),
-      end: json['end'] == null ? null : DateTime.parse(json['end'] as String),
-      cell_loc: json['cell_loc'] as int?,
-      status: json['status'] as int?,
-      duration: json['duration'] as int?,
-      bookable_cost: (json['bookable_cost'] as num?)?.toDouble(),
-      total_gun_cost: (json['total_gun_cost'] as num?)?.toDouble(),
-      total_ammunition_cost:
-          (json['total_ammunition_cost'] as num?)?.toDouble(),
-      total_equipment_cost: (json['total_equipment_cost'] as num?)?.toDouble(),
-      tax_included: (json['tax_included'] as num?)?.toDouble(),
-      sub_total: (json['sub_total'] as num?)?.toDouble(),
-      gun_discount: (json['gun_discount'] as num?)?.toDouble(),
-      ammunition_discount: (json['ammunition_discount'] as num?)?.toDouble(),
-      equipment_discount: (json['equipment_discount'] as num?)?.toDouble(),
-      total_discount: (json['total_discount'] as num?)?.toDouble(),
-      total_cost: (json['total_cost'] as num?)?.toDouble(),
-      purchase_number: json['purchase_number'] as String?,
-      created_at: json['created_at'] == null
-          ? null
-          : DateTime.parse(json['created_at'] as String),
-      updated_at: json['updated_at'] == null
-          ? null
-          : DateTime.parse(json['updated_at'] as String),
-      status_name: json['status_name'] as String?,
-      morph_class: json['morph_class'] as String?,
-      admin: json['admin'] == null
-          ? null
-          : AdminModel.fromJson(json['admin'] as Map<String, dynamic>),
-      ammunitions: (json['ammunitions'] as List<dynamic>?)
-          ?.map((e) => AmmunitionsModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      guns: (json['guns'] as List<dynamic>?)
-          ?.map((e) => GunModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      equipements: (json['equipements'] as List<dynamic>?)
-          ?.map((e) => EquipmentModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      bookable: json['bookable'] == null
-          ? null
-          : ActivityModel.fromJson(json['bookable'] as Map<String, dynamic>),
-    );
+_BookingModel _$BookingModelFromJson(
+  Map<String, dynamic> json,
+) => _BookingModel(
+  id: (json['id'] as num?)?.toInt(),
+  bookable_id: (json['bookable_id'] as num?)?.toInt(),
+  name: json['name'] as String?,
+  client_id: (json['client_id'] as num?)?.toInt(),
+  activity_id: (json['activity_id'] as num?)?.toInt(),
+  description: json['description'] as String?,
+  start: json['start'] == null ? null : DateTime.parse(json['start'] as String),
+  end: json['end'] == null ? null : DateTime.parse(json['end'] as String),
+  cell_loc: (json['cell_loc'] as num?)?.toInt(),
+  status: (json['status'] as num?)?.toInt(),
+  duration: (json['duration'] as num?)?.toInt(),
+  bookable_cost: (json['bookable_cost'] as num?)?.toDouble(),
+  total_gun_cost: (json['total_gun_cost'] as num?)?.toDouble(),
+  total_ammunition_cost: (json['total_ammunition_cost'] as num?)?.toDouble(),
+  total_equipment_cost: (json['total_equipment_cost'] as num?)?.toDouble(),
+  tax_included: (json['tax_included'] as num?)?.toDouble(),
+  sub_total: (json['sub_total'] as num?)?.toDouble(),
+  gun_discount: (json['gun_discount'] as num?)?.toDouble(),
+  ammunition_discount: (json['ammunition_discount'] as num?)?.toDouble(),
+  equipment_discount: (json['equipment_discount'] as num?)?.toDouble(),
+  total_discount: (json['total_discount'] as num?)?.toDouble(),
+  total_cost: (json['total_cost'] as num?)?.toDouble(),
+  purchase_number: json['purchase_number'] as String?,
+  created_at: json['created_at'] == null
+      ? null
+      : DateTime.parse(json['created_at'] as String),
+  updated_at: json['updated_at'] == null
+      ? null
+      : DateTime.parse(json['updated_at'] as String),
+  status_name: json['status_name'] as String?,
+  morph_class: json['morph_class'] as String?,
+  admin: json['admin'] == null
+      ? null
+      : AdminModel.fromJson(json['admin'] as Map<String, dynamic>),
+  ammunitions: (json['ammunitions'] as List<dynamic>?)
+      ?.map((e) => AmmunitionsModel.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  guns: (json['guns'] as List<dynamic>?)
+      ?.map((e) => GunModel.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  equipements: (json['equipements'] as List<dynamic>?)
+      ?.map((e) => EquipmentModel.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  bookable: json['bookable'] == null
+      ? null
+      : ActivityModel.fromJson(json['bookable'] as Map<String, dynamic>),
+);
 
-Map<String, dynamic> _$$_BookingModelToJson(_$_BookingModel instance) =>
+Map<String, dynamic> _$BookingModelToJson(_BookingModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'bookable_id': instance.bookable_id,

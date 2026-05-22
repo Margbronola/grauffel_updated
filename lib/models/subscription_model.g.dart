@@ -6,13 +6,13 @@ part of 'subscription_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SubscriptionModel _$$_SubscriptionModelFromJson(Map<String, dynamic> json) =>
-    _$_SubscriptionModel(
-      id: json['id'] as int?,
-      client_id: json['client_id'] as int?,
-      subscription_type_id: json['subscription_type_id'] as int?,
+_SubscriptionModel _$SubscriptionModelFromJson(Map<String, dynamic> json) =>
+    _SubscriptionModel(
+      id: (json['id'] as num?)?.toInt(),
+      client_id: (json['client_id'] as num?)?.toInt(),
+      subscription_type_id: (json['subscription_type_id'] as num?)?.toInt(),
       price: (json['price'] as num?)?.toDouble(),
-      status: json['status'] as int?,
+      status: (json['status'] as num?)?.toInt(),
       created_at: json['created_at'] == null
           ? null
           : DateTime.parse(json['created_at'] as String),
@@ -25,19 +25,19 @@ _$_SubscriptionModel _$$_SubscriptionModelFromJson(Map<String, dynamic> json) =>
       subscription_type: json['subscription_type'] == null
           ? null
           : SubscriptionTypeModel.fromJson(
-              json['subscription_type'] as Map<String, dynamic>),
+              json['subscription_type'] as Map<String, dynamic>,
+            ),
       paymentMethodToken: json['paymentMethodToken'] as String?,
       subscriptionId: json['subscriptionId'] as String?,
-      bank: json['bank'] as int?,
-      recurring_cycle: json['recurring_cycle'] as int?,
-      recurring_status: json['recurring_status'] as int?,
+      bank: (json['bank'] as num?)?.toInt(),
+      recurring_cycle: (json['recurring_cycle'] as num?)?.toInt(),
+      recurring_status: (json['recurring_status'] as num?)?.toInt(),
       end_date: json['end_date'] == null
           ? null
           : DateTime.parse(json['end_date'] as String),
     );
 
-Map<String, dynamic> _$$_SubscriptionModelToJson(
-        _$_SubscriptionModel instance) =>
+Map<String, dynamic> _$SubscriptionModelToJson(_SubscriptionModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'client_id': instance.client_id,

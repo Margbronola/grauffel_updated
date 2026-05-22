@@ -10,7 +10,7 @@ part 'gun_model.freezed.dart';
 part 'gun_model.g.dart';
 
 @freezed
-class GunModel with _$GunModel {
+abstract class GunModel with _$GunModel {
   const factory GunModel({
     int? id,
     String? model,

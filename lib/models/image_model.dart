@@ -7,7 +7,7 @@ part 'image_model.freezed.dart';
 part 'image_model.g.dart';
 
 @freezed
-class ImageModel with _$ImageModel {
+abstract class ImageModel with _$ImageModel {
   const factory ImageModel(
       {int? id,
       String? filename,

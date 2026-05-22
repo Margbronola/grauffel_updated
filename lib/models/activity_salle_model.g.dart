@@ -6,15 +6,14 @@ part of 'activity_salle_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ActivitySalleModel _$$_ActivitySalleModelFromJson(
-        Map<String, dynamic> json) =>
-    _$_ActivitySalleModel(
-      id: json['id'] as int?,
+_ActivitySalleModel _$ActivitySalleModelFromJson(Map<String, dynamic> json) =>
+    _ActivitySalleModel(
+      id: (json['id'] as num?)?.toInt(),
       date_start: json['date_start'] as String?,
       date_end: json['date_end'] as String?,
-      capacity: json['capacity'] as int?,
-      activity_id: json['activity_id'] as int?,
-      status: json['status'] as int?,
+      capacity: (json['capacity'] as num?)?.toInt(),
+      activity_id: (json['activity_id'] as num?)?.toInt(),
+      status: (json['status'] as num?)?.toInt(),
       activity: json['activity'] == null
           ? null
           : ActivityModel.fromJson(json['activity'] as Map<String, dynamic>),
@@ -26,8 +25,7 @@ _$_ActivitySalleModel _$$_ActivitySalleModelFromJson(
           : DateTime.parse(json['updated_at'] as String),
     );
 
-Map<String, dynamic> _$$_ActivitySalleModelToJson(
-        _$_ActivitySalleModel instance) =>
+Map<String, dynamic> _$ActivitySalleModelToJson(_ActivitySalleModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'date_start': instance.date_start,
