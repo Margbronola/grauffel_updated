@@ -6,8 +6,8 @@ part of 'reserve_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ReserveModel _$ReserveModelFromJson(Map<String, dynamic> json) =>
-    _ReserveModel(
+_$ReserveModelImpl _$$ReserveModelImplFromJson(Map<String, dynamic> json) =>
+    _$ReserveModelImpl(
       image: json['image'] as String?,
       title: json['title'] as String?,
       description: json['description'] as String?,
@@ -22,7 +22,7 @@ _ReserveModel _$ReserveModelFromJson(Map<String, dynamic> json) =>
           : TypeModel.fromJson(json['type'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$ReserveModelToJson(_ReserveModel instance) =>
+Map<String, dynamic> _$$ReserveModelImplToJson(_$ReserveModelImpl instance) =>
     <String, dynamic>{
       'image': instance.image,
       'title': instance.title,

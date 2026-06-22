@@ -6,8 +6,8 @@ part of 'document_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_DocumentModel _$DocumentModelFromJson(Map<String, dynamic> json) =>
-    _DocumentModel(
+_$DocumentModelImpl _$$DocumentModelImplFromJson(Map<String, dynamic> json) =>
+    _$DocumentModelImpl(
       id: (json['id'] as num?)?.toInt(),
       client_id: (json['client_id'] as num?)?.toInt(),
       client_document_type_id: (json['client_document_type_id'] as num?)
@@ -33,7 +33,7 @@ _DocumentModel _$DocumentModelFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['updated_at'] as String),
     );
 
-Map<String, dynamic> _$DocumentModelToJson(_DocumentModel instance) =>
+Map<String, dynamic> _$$DocumentModelImplToJson(_$DocumentModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'client_id': instance.client_id,

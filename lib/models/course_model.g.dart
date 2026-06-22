@@ -6,43 +6,45 @@ part of 'course_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_CourseModel _$CourseModelFromJson(Map<String, dynamic> json) => _CourseModel(
-  id: (json['id'] as num?)?.toInt(),
-  name: json['name'] as String?,
-  type_id: (json['type_id'] as num?)?.toInt(),
-  level_id: (json['level_id'] as num?)?.toInt(),
-  max_persons: (json['max_persons'] as num?)?.toInt(),
-  active_booking_count: (json['active_booking_count'] as num?)?.toInt(),
-  price: (json['price'] as num?)?.toDouble(),
-  date_from: json['date_from'] as String?,
-  date_to: json['date_to'] as String?,
-  start_time: json['start_time'] as String?,
-  end_time: json['end_time'] as String?,
-  color_code: json['color_code'] as String?,
-  period: (json['period'] as List<dynamic>?)
-      ?.map((e) => (e as num).toInt())
-      .toList(),
-  admin_id: json['admin_id'] as String?,
-  salle_id: json['salle_id'] as String?,
-  description: json['description'] as String?,
-  status: (json['status'] as num?)?.toInt(),
-  created_at: json['created_at'] == null
-      ? null
-      : DateTime.parse(json['created_at'] as String),
-  updated_at: json['updated_at'] == null
-      ? null
-      : DateTime.parse(json['updated_at'] as String),
-  status_name: json['status_name'] as String?,
-  admin: json['admin'] == null
-      ? null
-      : AdminModel.fromJson(json['admin'] as Map<String, dynamic>),
-  type: json['type'] == null
-      ? null
-      : TypeModel.fromJson(json['type'] as Map<String, dynamic>),
-  questions: json['questions'] as List<dynamic>?,
-);
+_$CourseModelImpl _$$CourseModelImplFromJson(Map<String, dynamic> json) =>
+    _$CourseModelImpl(
+      id: (json['id'] as num?)?.toInt(),
+      name: json['name'] as String?,
+      type_id: (json['type_id'] as num?)?.toInt(),
+      level_id: (json['level_id'] as num?)?.toInt(),
+      max_persons: (json['max_persons'] as num?)?.toInt(),
+      active_booking_count: (json['active_booking_count'] as num?)?.toInt(),
+      price: (json['price'] as num?)?.toDouble(),
+      date_from: json['date_from'] as String?,
+      date_to: json['date_to'] as String?,
+      start_time: json['start_time'] as String?,
+      end_time: json['end_time'] as String?,
+      color_code: json['color_code'] as String?,
+      period: (json['period'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
+      admin_id: json['admin_id'] as String?,
+      salle_id: json['salle_id'] as String?,
+      description: json['description'] as String?,
+      status: (json['status'] as num?)?.toInt(),
+      is_bookable: json['is_bookable'] as bool?,
+      created_at: json['created_at'] == null
+          ? null
+          : DateTime.parse(json['created_at'] as String),
+      updated_at: json['updated_at'] == null
+          ? null
+          : DateTime.parse(json['updated_at'] as String),
+      status_name: json['status_name'] as String?,
+      admin: json['admin'] == null
+          ? null
+          : AdminModel.fromJson(json['admin'] as Map<String, dynamic>),
+      type: json['type'] == null
+          ? null
+          : TypeModel.fromJson(json['type'] as Map<String, dynamic>),
+      questions: json['questions'] as List<dynamic>?,
+    );
 
-Map<String, dynamic> _$CourseModelToJson(_CourseModel instance) =>
+Map<String, dynamic> _$$CourseModelImplToJson(_$CourseModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
@@ -61,6 +63,7 @@ Map<String, dynamic> _$CourseModelToJson(_CourseModel instance) =>
       'salle_id': instance.salle_id,
       'description': instance.description,
       'status': instance.status,
+      'is_bookable': instance.is_bookable,
       'created_at': instance.created_at?.toIso8601String(),
       'updated_at': instance.updated_at?.toIso8601String(),
       'status_name': instance.status_name,

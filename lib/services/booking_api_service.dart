@@ -169,8 +169,9 @@ mixin class BookingAPIService {
               fetchBookings.map((e) => BookingModel.fromJson(e)).toList(),
             );
           } else {
-            _bookings =
-                fetchBookings.map((e) => BookingModel.fromJson(e)).toList();
+            _bookings = fetchBookings
+                .map((e) => BookingModel.fromJson(e))
+                .toList();
           }
 
           _pagingModel = PagingModel(
@@ -209,8 +210,9 @@ mixin class BookingAPIService {
       if (respo.statusCode == 200) {
         var data = json.decode(respo.body);
         List fetchBookable = data;
-        _bookable =
-            fetchBookable.map((e) => ActivityModel.fromJson(e)).toList();
+        _bookable = fetchBookable
+            .map((e) => ActivityModel.fromJson(e))
+            .toList();
         print("ACTIVITIES: $data");
         print("ACTIVITIES: ${_bookable[0].activitysalle}");
         try {
@@ -221,8 +223,9 @@ mixin class BookingAPIService {
               fetchBookable.map((e) => ActivityModel.fromJson(e)).toList(),
             );
           } else {
-            _bookable =
-                fetchBookable.map((e) => ActivityModel.fromJson(e)).toList();
+            _bookable = fetchBookable
+                .map((e) => ActivityModel.fromJson(e))
+                .toList();
           }
 
           // _pagingModel = PagingModel(
@@ -316,11 +319,21 @@ mixin class BookingAPIService {
       print("FETCH COURSES");
       if (respo.statusCode == 200) {
         var data = json.decode(respo.body);
+        print(
+          "COURS FETCH: ${data[0]["name"]} - ${data[0]["type"]} - ${data[0]["is_bookable"]} - ${data[0]["status_name"]}",
+        );
+        print(
+          "COURS FETCH: ${data[1]["name"]} - ${data[1]["type"]} - ${data[1]["is_bookable"]} - ${data[1]["status_name"]}",
+        );
+        print(
+          "COURS FETCH: ${data[2]["name"]} - ${data[2]["type"]} - ${data[2]["is_bookable"]} - ${data[2]["status_name"]}",
+        );
         try {
           List fetchCouresList = data;
 
-          _courses =
-              fetchCouresList.map((e) => CourseModel.fromJson(e)).toList();
+          _courses = fetchCouresList
+              .map((e) => CourseModel.fromJson(e))
+              .toList();
           print("COURs: ${_courses[0]}");
 
           if (isFetchMore) {
@@ -342,10 +355,12 @@ mixin class BookingAPIService {
                   name: x.name,
                   start_time: x.start_time,
                   end_time: x.end_time,
+                  is_bookable: x.is_bookable,
                   date_from: x.date_from,
                   date_to: x.date_to,
                   price: x.price,
                   status: x.status,
+                  status_name: x.status_name,
                   description: x.description,
                   active_booking_count: x.active_booking_count,
                   max_persons: x.max_persons,
@@ -484,8 +499,9 @@ mixin class BookingAPIService {
   }) async {
     debugPrint("book api");
     try {
-      final List<Map<String, dynamic>> gunss =
-          guns.map((e) => e.toJson()).toList();
+      final List<Map<String, dynamic>> gunss = guns
+          .map((e) => e.toJson())
+          .toList();
       final Map body = {
         "date": "${date.year}-${date.month}-${date.day}",
         "time": time.split("-")[0],

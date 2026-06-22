@@ -6,8 +6,8 @@ part of 'equipment_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_EquipmentModel _$EquipmentModelFromJson(Map<String, dynamic> json) =>
-    _EquipmentModel(
+_$EquipmentModelImpl _$$EquipmentModelImplFromJson(Map<String, dynamic> json) =>
+    _$EquipmentModelImpl(
       id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       price: (json['price'] as num?)?.toDouble(),
@@ -32,20 +32,21 @@ _EquipmentModel _$EquipmentModelFromJson(Map<String, dynamic> json) =>
       image_thumb_url: json['image_thumb_url'] as String?,
     );
 
-Map<String, dynamic> _$EquipmentModelToJson(_EquipmentModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'price': instance.price,
-      'description': instance.description,
-      'stocks': instance.stocks,
-      'type': instance.type,
-      'pivot': instance.pivot,
-      'created_at': instance.created_at?.toIso8601String(),
-      'updated_at': instance.updated_at?.toIso8601String(),
-      'brand': instance.brand,
-      'quantity': instance.quantity,
-      'qty': instance.qty,
-      'image_url': instance.image_url,
-      'image_thumb_url': instance.image_thumb_url,
-    };
+Map<String, dynamic> _$$EquipmentModelImplToJson(
+  _$EquipmentModelImpl instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'name': instance.name,
+  'price': instance.price,
+  'description': instance.description,
+  'stocks': instance.stocks,
+  'type': instance.type,
+  'pivot': instance.pivot,
+  'created_at': instance.created_at?.toIso8601String(),
+  'updated_at': instance.updated_at?.toIso8601String(),
+  'brand': instance.brand,
+  'quantity': instance.quantity,
+  'qty': instance.qty,
+  'image_url': instance.image_url,
+  'image_thumb_url': instance.image_thumb_url,
+};

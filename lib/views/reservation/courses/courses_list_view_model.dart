@@ -21,20 +21,19 @@ class CoursesListViewModel extends BaseViewModel {
   final NavigationService _navigationService = locator<NavigationService>();
 
   List<ActivityModel> get bookableCourse => _bookingAPIService.bookableCourse!;
-  List<ActivityModel> get cours =>
-      _bookingAPIService.bookableCourse!
-          .where((element) => element.type!.name == "cours")
-          //  || element.type!.name == "initiation"
-          .toList();
+  List<ActivityModel> get cours => _bookingAPIService.bookableCourse!
+      .where(
+        (element) =>
+            element.type!.name == "cours" || element.type!.name == "initiation",
+      )
+      .toList();
 
-  List<ActivityModel> get entrainement =>
-      _bookingAPIService.bookableCourse!
-          .where((element) => element.type!.name == "entrainement")
-          .toList();
-  List<ActivityModel> get stages =>
-      _bookingAPIService.bookableCourse!
-          .where((element) => element.type!.name == "stage")
-          .toList();
+  List<ActivityModel> get entrainement => _bookingAPIService.bookableCourse!
+      .where((element) => element.type!.name == "entrainement")
+      .toList();
+  List<ActivityModel> get stages => _bookingAPIService.bookableCourse!
+      .where((element) => element.type!.name == "stage")
+      .toList();
 
   Future init() async {
     if (_bookingAPIService.bookableCourse!.isEmpty) {
@@ -42,6 +41,7 @@ class CoursesListViewModel extends BaseViewModel {
       await _bookingAPIService.fetchCourses(token: _userService.token!);
       notifyListeners();
       setBusy(false);
+      print("COURSES: ${cours}");
     }
   }
 

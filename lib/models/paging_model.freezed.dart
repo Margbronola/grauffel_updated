@@ -1,5 +1,5 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,275 +9,243 @@ part of 'paging_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
-// dart format off
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
+
 /// @nodoc
 mixin _$PagingModel {
+  int? get current_page => throw _privateConstructorUsedError;
+  String? get first_page_url => throw _privateConstructorUsedError;
+  String? get next_page_url => throw _privateConstructorUsedError;
+  String? get prev_page_url => throw _privateConstructorUsedError;
+  int? get total => throw _privateConstructorUsedError;
 
- int? get current_page; String? get first_page_url; String? get next_page_url; String? get prev_page_url; int? get total;
-/// Create a copy of PagingModel
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$PagingModelCopyWith<PagingModel> get copyWith => _$PagingModelCopyWithImpl<PagingModel>(this as PagingModel, _$identity);
-
-
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PagingModel&&(identical(other.current_page, current_page) || other.current_page == current_page)&&(identical(other.first_page_url, first_page_url) || other.first_page_url == first_page_url)&&(identical(other.next_page_url, next_page_url) || other.next_page_url == next_page_url)&&(identical(other.prev_page_url, prev_page_url) || other.prev_page_url == prev_page_url)&&(identical(other.total, total) || other.total == total));
-}
-
-
-@override
-int get hashCode => Object.hash(runtimeType,current_page,first_page_url,next_page_url,prev_page_url,total);
-
-@override
-String toString() {
-  return 'PagingModel(current_page: $current_page, first_page_url: $first_page_url, next_page_url: $next_page_url, prev_page_url: $prev_page_url, total: $total)';
-}
-
-
+  /// Create a copy of PagingModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $PagingModelCopyWith<PagingModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $PagingModelCopyWith<$Res>  {
-  factory $PagingModelCopyWith(PagingModel value, $Res Function(PagingModel) _then) = _$PagingModelCopyWithImpl;
-@useResult
-$Res call({
- int? current_page, String? first_page_url, String? next_page_url, String? prev_page_url, int? total
-});
-
-
-
-
+abstract class $PagingModelCopyWith<$Res> {
+  factory $PagingModelCopyWith(
+    PagingModel value,
+    $Res Function(PagingModel) then,
+  ) = _$PagingModelCopyWithImpl<$Res, PagingModel>;
+  @useResult
+  $Res call({
+    int? current_page,
+    String? first_page_url,
+    String? next_page_url,
+    String? prev_page_url,
+    int? total,
+  });
 }
+
 /// @nodoc
-class _$PagingModelCopyWithImpl<$Res>
+class _$PagingModelCopyWithImpl<$Res, $Val extends PagingModel>
     implements $PagingModelCopyWith<$Res> {
-  _$PagingModelCopyWithImpl(this._self, this._then);
+  _$PagingModelCopyWithImpl(this._value, this._then);
 
-  final PagingModel _self;
-  final $Res Function(PagingModel) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of PagingModel
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? current_page = freezed,Object? first_page_url = freezed,Object? next_page_url = freezed,Object? prev_page_url = freezed,Object? total = freezed,}) {
-  return _then(_self.copyWith(
-current_page: freezed == current_page ? _self.current_page : current_page // ignore: cast_nullable_to_non_nullable
-as int?,first_page_url: freezed == first_page_url ? _self.first_page_url : first_page_url // ignore: cast_nullable_to_non_nullable
-as String?,next_page_url: freezed == next_page_url ? _self.next_page_url : next_page_url // ignore: cast_nullable_to_non_nullable
-as String?,prev_page_url: freezed == prev_page_url ? _self.prev_page_url : prev_page_url // ignore: cast_nullable_to_non_nullable
-as String?,total: freezed == total ? _self.total : total // ignore: cast_nullable_to_non_nullable
-as int?,
-  ));
+  /// Create a copy of PagingModel
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? current_page = freezed,
+    Object? first_page_url = freezed,
+    Object? next_page_url = freezed,
+    Object? prev_page_url = freezed,
+    Object? total = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            current_page: freezed == current_page
+                ? _value.current_page
+                : current_page // ignore: cast_nullable_to_non_nullable
+                      as int?,
+            first_page_url: freezed == first_page_url
+                ? _value.first_page_url
+                : first_page_url // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            next_page_url: freezed == next_page_url
+                ? _value.next_page_url
+                : next_page_url // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            prev_page_url: freezed == prev_page_url
+                ? _value.prev_page_url
+                : prev_page_url // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            total: freezed == total
+                ? _value.total
+                : total // ignore: cast_nullable_to_non_nullable
+                      as int?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$PagingModelImplCopyWith<$Res>
+    implements $PagingModelCopyWith<$Res> {
+  factory _$$PagingModelImplCopyWith(
+    _$PagingModelImpl value,
+    $Res Function(_$PagingModelImpl) then,
+  ) = __$$PagingModelImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    int? current_page,
+    String? first_page_url,
+    String? next_page_url,
+    String? prev_page_url,
+    int? total,
+  });
 }
 
+/// @nodoc
+class __$$PagingModelImplCopyWithImpl<$Res>
+    extends _$PagingModelCopyWithImpl<$Res, _$PagingModelImpl>
+    implements _$$PagingModelImplCopyWith<$Res> {
+  __$$PagingModelImplCopyWithImpl(
+    _$PagingModelImpl _value,
+    $Res Function(_$PagingModelImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [PagingModel].
-extension PagingModelPatterns on PagingModel {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PagingModel value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _PagingModel() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PagingModel value)  $default,){
-final _that = this;
-switch (_that) {
-case _PagingModel():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PagingModel value)?  $default,){
-final _that = this;
-switch (_that) {
-case _PagingModel() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? current_page,  String? first_page_url,  String? next_page_url,  String? prev_page_url,  int? total)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _PagingModel() when $default != null:
-return $default(_that.current_page,_that.first_page_url,_that.next_page_url,_that.prev_page_url,_that.total);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? current_page,  String? first_page_url,  String? next_page_url,  String? prev_page_url,  int? total)  $default,) {final _that = this;
-switch (_that) {
-case _PagingModel():
-return $default(_that.current_page,_that.first_page_url,_that.next_page_url,_that.prev_page_url,_that.total);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? current_page,  String? first_page_url,  String? next_page_url,  String? prev_page_url,  int? total)?  $default,) {final _that = this;
-switch (_that) {
-case _PagingModel() when $default != null:
-return $default(_that.current_page,_that.first_page_url,_that.next_page_url,_that.prev_page_url,_that.total);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of PagingModel
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? current_page = freezed,
+    Object? first_page_url = freezed,
+    Object? next_page_url = freezed,
+    Object? prev_page_url = freezed,
+    Object? total = freezed,
+  }) {
+    return _then(
+      _$PagingModelImpl(
+        current_page: freezed == current_page
+            ? _value.current_page
+            : current_page // ignore: cast_nullable_to_non_nullable
+                  as int?,
+        first_page_url: freezed == first_page_url
+            ? _value.first_page_url
+            : first_page_url // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        next_page_url: freezed == next_page_url
+            ? _value.next_page_url
+            : next_page_url // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        prev_page_url: freezed == prev_page_url
+            ? _value.prev_page_url
+            : prev_page_url // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        total: freezed == total
+            ? _value.total
+            : total // ignore: cast_nullable_to_non_nullable
+                  as int?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
+class _$PagingModelImpl implements _PagingModel {
+  const _$PagingModelImpl({
+    this.current_page,
+    this.first_page_url,
+    this.next_page_url,
+    this.prev_page_url,
+    this.total,
+  });
 
-class _PagingModel implements PagingModel {
-  const _PagingModel({this.current_page, this.first_page_url, this.next_page_url, this.prev_page_url, this.total});
-  
+  @override
+  final int? current_page;
+  @override
+  final String? first_page_url;
+  @override
+  final String? next_page_url;
+  @override
+  final String? prev_page_url;
+  @override
+  final int? total;
 
-@override final  int? current_page;
-@override final  String? first_page_url;
-@override final  String? next_page_url;
-@override final  String? prev_page_url;
-@override final  int? total;
+  @override
+  String toString() {
+    return 'PagingModel(current_page: $current_page, first_page_url: $first_page_url, next_page_url: $next_page_url, prev_page_url: $prev_page_url, total: $total)';
+  }
 
-/// Create a copy of PagingModel
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$PagingModelCopyWith<_PagingModel> get copyWith => __$PagingModelCopyWithImpl<_PagingModel>(this, _$identity);
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PagingModelImpl &&
+            (identical(other.current_page, current_page) ||
+                other.current_page == current_page) &&
+            (identical(other.first_page_url, first_page_url) ||
+                other.first_page_url == first_page_url) &&
+            (identical(other.next_page_url, next_page_url) ||
+                other.next_page_url == next_page_url) &&
+            (identical(other.prev_page_url, prev_page_url) ||
+                other.prev_page_url == prev_page_url) &&
+            (identical(other.total, total) || other.total == total));
+  }
 
+  @override
+  int get hashCode => Object.hash(
+    runtimeType,
+    current_page,
+    first_page_url,
+    next_page_url,
+    prev_page_url,
+    total,
+  );
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PagingModel&&(identical(other.current_page, current_page) || other.current_page == current_page)&&(identical(other.first_page_url, first_page_url) || other.first_page_url == first_page_url)&&(identical(other.next_page_url, next_page_url) || other.next_page_url == next_page_url)&&(identical(other.prev_page_url, prev_page_url) || other.prev_page_url == prev_page_url)&&(identical(other.total, total) || other.total == total));
+  /// Create a copy of PagingModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PagingModelImplCopyWith<_$PagingModelImpl> get copyWith =>
+      __$$PagingModelImplCopyWithImpl<_$PagingModelImpl>(this, _$identity);
 }
 
+abstract class _PagingModel implements PagingModel {
+  const factory _PagingModel({
+    final int? current_page,
+    final String? first_page_url,
+    final String? next_page_url,
+    final String? prev_page_url,
+    final int? total,
+  }) = _$PagingModelImpl;
 
-@override
-int get hashCode => Object.hash(runtimeType,current_page,first_page_url,next_page_url,prev_page_url,total);
+  @override
+  int? get current_page;
+  @override
+  String? get first_page_url;
+  @override
+  String? get next_page_url;
+  @override
+  String? get prev_page_url;
+  @override
+  int? get total;
 
-@override
-String toString() {
-  return 'PagingModel(current_page: $current_page, first_page_url: $first_page_url, next_page_url: $next_page_url, prev_page_url: $prev_page_url, total: $total)';
+  /// Create a copy of PagingModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PagingModelImplCopyWith<_$PagingModelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$PagingModelCopyWith<$Res> implements $PagingModelCopyWith<$Res> {
-  factory _$PagingModelCopyWith(_PagingModel value, $Res Function(_PagingModel) _then) = __$PagingModelCopyWithImpl;
-@override @useResult
-$Res call({
- int? current_page, String? first_page_url, String? next_page_url, String? prev_page_url, int? total
-});
-
-
-
-
-}
-/// @nodoc
-class __$PagingModelCopyWithImpl<$Res>
-    implements _$PagingModelCopyWith<$Res> {
-  __$PagingModelCopyWithImpl(this._self, this._then);
-
-  final _PagingModel _self;
-  final $Res Function(_PagingModel) _then;
-
-/// Create a copy of PagingModel
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? current_page = freezed,Object? first_page_url = freezed,Object? next_page_url = freezed,Object? prev_page_url = freezed,Object? total = freezed,}) {
-  return _then(_PagingModel(
-current_page: freezed == current_page ? _self.current_page : current_page // ignore: cast_nullable_to_non_nullable
-as int?,first_page_url: freezed == first_page_url ? _self.first_page_url : first_page_url // ignore: cast_nullable_to_non_nullable
-as String?,next_page_url: freezed == next_page_url ? _self.next_page_url : next_page_url // ignore: cast_nullable_to_non_nullable
-as String?,prev_page_url: freezed == prev_page_url ? _self.prev_page_url : prev_page_url // ignore: cast_nullable_to_non_nullable
-as String?,total: freezed == total ? _self.total : total // ignore: cast_nullable_to_non_nullable
-as int?,
-  ));
-}
-
-
-}
-
-// dart format on

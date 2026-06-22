@@ -6,9 +6,9 @@ part of 'client_documents_types_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ClientDocumentsTypesModel _$ClientDocumentsTypesModelFromJson(
+_$ClientDocumentsTypesModelImpl _$$ClientDocumentsTypesModelImplFromJson(
   Map<String, dynamic> json,
-) => _ClientDocumentsTypesModel(
+) => _$ClientDocumentsTypesModelImpl(
   id: (json['id'] as num?)?.toInt(),
   name: json['name'] as String?,
   description: json['description'] as String?,
@@ -22,8 +22,8 @@ _ClientDocumentsTypesModel _$ClientDocumentsTypesModelFromJson(
       : DateTime.parse(json['updated_at'] as String),
 );
 
-Map<String, dynamic> _$ClientDocumentsTypesModelToJson(
-  _ClientDocumentsTypesModel instance,
+Map<String, dynamic> _$$ClientDocumentsTypesModelImplToJson(
+  _$ClientDocumentsTypesModelImpl instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'name': instance.name,

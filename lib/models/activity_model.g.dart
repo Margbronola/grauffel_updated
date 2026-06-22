@@ -6,8 +6,8 @@ part of 'activity_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ActivityModel _$ActivityModelFromJson(Map<String, dynamic> json) =>
-    _ActivityModel(
+_$ActivityModelImpl _$$ActivityModelImplFromJson(Map<String, dynamic> json) =>
+    _$ActivityModelImpl(
       id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       description: json['description'] as String?,
@@ -26,11 +26,13 @@ _ActivityModel _$ActivityModelFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['updated_at'] as String),
       has_relation: json['has_relation'] as bool?,
       has_salle: json['has_salle'] as bool?,
+      is_bookable: json['is_bookable'] as bool?,
       is_active: json['is_active'] as bool?,
       date_from: json['date_from'] as String?,
       date_to: json['date_to'] as String?,
       start_time: json['start_time'] as String?,
       end_time: json['end_time'] as String?,
+      status_name: json['status_name'] as String?,
       type: json['type'] == null
           ? null
           : TypeModel.fromJson(json['type'] as Map<String, dynamic>),
@@ -47,7 +49,7 @@ _ActivityModel _$ActivityModelFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$ActivityModelToJson(_ActivityModel instance) =>
+Map<String, dynamic> _$$ActivityModelImplToJson(_$ActivityModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
@@ -63,11 +65,13 @@ Map<String, dynamic> _$ActivityModelToJson(_ActivityModel instance) =>
       'updated_at': instance.updated_at?.toIso8601String(),
       'has_relation': instance.has_relation,
       'has_salle': instance.has_salle,
+      'is_bookable': instance.is_bookable,
       'is_active': instance.is_active,
       'date_from': instance.date_from,
       'date_to': instance.date_to,
       'start_time': instance.start_time,
       'end_time': instance.end_time,
+      'status_name': instance.status_name,
       'type': instance.type,
       'admin': instance.admin,
       'max_persons': instance.max_persons,

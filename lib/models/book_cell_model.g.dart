@@ -6,8 +6,8 @@ part of 'book_cell_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_BookCellModel _$BookCellModelFromJson(Map<String, dynamic> json) =>
-    _BookCellModel(
+_$BookCellModelImpl _$$BookCellModelImplFromJson(Map<String, dynamic> json) =>
+    _$BookCellModelImpl(
       date: json['date'] as String?,
       time: json['time'] as String?,
       activity_id: (json['activity_id'] as num?)?.toInt(),
@@ -22,7 +22,7 @@ _BookCellModel _$BookCellModelFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$BookCellModelToJson(_BookCellModel instance) =>
+Map<String, dynamic> _$$BookCellModelImplToJson(_$BookCellModelImpl instance) =>
     <String, dynamic>{
       'date': instance.date,
       'time': instance.time,

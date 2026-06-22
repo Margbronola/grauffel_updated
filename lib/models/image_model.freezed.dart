@@ -1,5 +1,5 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,299 +9,317 @@ part of 'image_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
-// dart format off
 T _$identity<T>(T value) => value;
 
-/// @nodoc
-mixin _$ImageModel implements DiagnosticableTreeMixin {
+final _privateConstructorUsedError = UnsupportedError(
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
- int? get id; String? get filename; String? get path; int? get order; int? get status; DateTime? get created_at; DateTime? get updated_at;
-/// Create a copy of ImageModel
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$ImageModelCopyWith<ImageModel> get copyWith => _$ImageModelCopyWithImpl<ImageModel>(this as ImageModel, _$identity);
+ImageModel _$ImageModelFromJson(Map<String, dynamic> json) {
+  return _ImageModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ImageModel {
+  int? get id => throw _privateConstructorUsedError;
+  String? get filename => throw _privateConstructorUsedError;
+  String? get path => throw _privateConstructorUsedError;
+  int? get order => throw _privateConstructorUsedError;
+  int? get status => throw _privateConstructorUsedError;
+  DateTime? get created_at => throw _privateConstructorUsedError;
+  DateTime? get updated_at => throw _privateConstructorUsedError;
 
   /// Serializes this ImageModel to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-@override
-void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-  properties
-    ..add(DiagnosticsProperty('type', 'ImageModel'))
-    ..add(DiagnosticsProperty('id', id))..add(DiagnosticsProperty('filename', filename))..add(DiagnosticsProperty('path', path))..add(DiagnosticsProperty('order', order))..add(DiagnosticsProperty('status', status))..add(DiagnosticsProperty('created_at', created_at))..add(DiagnosticsProperty('updated_at', updated_at));
-}
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ImageModel&&(identical(other.id, id) || other.id == id)&&(identical(other.filename, filename) || other.filename == filename)&&(identical(other.path, path) || other.path == path)&&(identical(other.order, order) || other.order == order)&&(identical(other.status, status) || other.status == status)&&(identical(other.created_at, created_at) || other.created_at == created_at)&&(identical(other.updated_at, updated_at) || other.updated_at == updated_at));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,id,filename,path,order,status,created_at,updated_at);
-
-@override
-String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
-  return 'ImageModel(id: $id, filename: $filename, path: $path, order: $order, status: $status, created_at: $created_at, updated_at: $updated_at)';
-}
-
-
+  /// Create a copy of ImageModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $ImageModelCopyWith<ImageModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $ImageModelCopyWith<$Res>  {
-  factory $ImageModelCopyWith(ImageModel value, $Res Function(ImageModel) _then) = _$ImageModelCopyWithImpl;
-@useResult
-$Res call({
- int? id, String? filename, String? path, int? order, int? status, DateTime? created_at, DateTime? updated_at
-});
-
-
-
-
+abstract class $ImageModelCopyWith<$Res> {
+  factory $ImageModelCopyWith(
+    ImageModel value,
+    $Res Function(ImageModel) then,
+  ) = _$ImageModelCopyWithImpl<$Res, ImageModel>;
+  @useResult
+  $Res call({
+    int? id,
+    String? filename,
+    String? path,
+    int? order,
+    int? status,
+    DateTime? created_at,
+    DateTime? updated_at,
+  });
 }
+
 /// @nodoc
-class _$ImageModelCopyWithImpl<$Res>
+class _$ImageModelCopyWithImpl<$Res, $Val extends ImageModel>
     implements $ImageModelCopyWith<$Res> {
-  _$ImageModelCopyWithImpl(this._self, this._then);
+  _$ImageModelCopyWithImpl(this._value, this._then);
 
-  final ImageModel _self;
-  final $Res Function(ImageModel) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of ImageModel
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? filename = freezed,Object? path = freezed,Object? order = freezed,Object? status = freezed,Object? created_at = freezed,Object? updated_at = freezed,}) {
-  return _then(_self.copyWith(
-id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as int?,filename: freezed == filename ? _self.filename : filename // ignore: cast_nullable_to_non_nullable
-as String?,path: freezed == path ? _self.path : path // ignore: cast_nullable_to_non_nullable
-as String?,order: freezed == order ? _self.order : order // ignore: cast_nullable_to_non_nullable
-as int?,status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
-as int?,created_at: freezed == created_at ? _self.created_at : created_at // ignore: cast_nullable_to_non_nullable
-as DateTime?,updated_at: freezed == updated_at ? _self.updated_at : updated_at // ignore: cast_nullable_to_non_nullable
-as DateTime?,
-  ));
+  /// Create a copy of ImageModel
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? filename = freezed,
+    Object? path = freezed,
+    Object? order = freezed,
+    Object? status = freezed,
+    Object? created_at = freezed,
+    Object? updated_at = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            id: freezed == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                      as int?,
+            filename: freezed == filename
+                ? _value.filename
+                : filename // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            path: freezed == path
+                ? _value.path
+                : path // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            order: freezed == order
+                ? _value.order
+                : order // ignore: cast_nullable_to_non_nullable
+                      as int?,
+            status: freezed == status
+                ? _value.status
+                : status // ignore: cast_nullable_to_non_nullable
+                      as int?,
+            created_at: freezed == created_at
+                ? _value.created_at
+                : created_at // ignore: cast_nullable_to_non_nullable
+                      as DateTime?,
+            updated_at: freezed == updated_at
+                ? _value.updated_at
+                : updated_at // ignore: cast_nullable_to_non_nullable
+                      as DateTime?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$ImageModelImplCopyWith<$Res>
+    implements $ImageModelCopyWith<$Res> {
+  factory _$$ImageModelImplCopyWith(
+    _$ImageModelImpl value,
+    $Res Function(_$ImageModelImpl) then,
+  ) = __$$ImageModelImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    int? id,
+    String? filename,
+    String? path,
+    int? order,
+    int? status,
+    DateTime? created_at,
+    DateTime? updated_at,
+  });
 }
 
+/// @nodoc
+class __$$ImageModelImplCopyWithImpl<$Res>
+    extends _$ImageModelCopyWithImpl<$Res, _$ImageModelImpl>
+    implements _$$ImageModelImplCopyWith<$Res> {
+  __$$ImageModelImplCopyWithImpl(
+    _$ImageModelImpl _value,
+    $Res Function(_$ImageModelImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [ImageModel].
-extension ImageModelPatterns on ImageModel {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ImageModel value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _ImageModel() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ImageModel value)  $default,){
-final _that = this;
-switch (_that) {
-case _ImageModel():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ImageModel value)?  $default,){
-final _that = this;
-switch (_that) {
-case _ImageModel() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? id,  String? filename,  String? path,  int? order,  int? status,  DateTime? created_at,  DateTime? updated_at)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _ImageModel() when $default != null:
-return $default(_that.id,_that.filename,_that.path,_that.order,_that.status,_that.created_at,_that.updated_at);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? id,  String? filename,  String? path,  int? order,  int? status,  DateTime? created_at,  DateTime? updated_at)  $default,) {final _that = this;
-switch (_that) {
-case _ImageModel():
-return $default(_that.id,_that.filename,_that.path,_that.order,_that.status,_that.created_at,_that.updated_at);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? id,  String? filename,  String? path,  int? order,  int? status,  DateTime? created_at,  DateTime? updated_at)?  $default,) {final _that = this;
-switch (_that) {
-case _ImageModel() when $default != null:
-return $default(_that.id,_that.filename,_that.path,_that.order,_that.status,_that.created_at,_that.updated_at);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of ImageModel
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? filename = freezed,
+    Object? path = freezed,
+    Object? order = freezed,
+    Object? status = freezed,
+    Object? created_at = freezed,
+    Object? updated_at = freezed,
+  }) {
+    return _then(
+      _$ImageModelImpl(
+        id: freezed == id
+            ? _value.id
+            : id // ignore: cast_nullable_to_non_nullable
+                  as int?,
+        filename: freezed == filename
+            ? _value.filename
+            : filename // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        path: freezed == path
+            ? _value.path
+            : path // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        order: freezed == order
+            ? _value.order
+            : order // ignore: cast_nullable_to_non_nullable
+                  as int?,
+        status: freezed == status
+            ? _value.status
+            : status // ignore: cast_nullable_to_non_nullable
+                  as int?,
+        created_at: freezed == created_at
+            ? _value.created_at
+            : created_at // ignore: cast_nullable_to_non_nullable
+                  as DateTime?,
+        updated_at: freezed == updated_at
+            ? _value.updated_at
+            : updated_at // ignore: cast_nullable_to_non_nullable
+                  as DateTime?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
+class _$ImageModelImpl with DiagnosticableTreeMixin implements _ImageModel {
+  const _$ImageModelImpl({
+    this.id,
+    this.filename,
+    this.path,
+    this.order,
+    this.status,
+    this.created_at,
+    this.updated_at,
+  });
 
-class _ImageModel with DiagnosticableTreeMixin implements ImageModel {
-  const _ImageModel({this.id, this.filename, this.path, this.order, this.status, this.created_at, this.updated_at});
-  factory _ImageModel.fromJson(Map<String, dynamic> json) => _$ImageModelFromJson(json);
+  factory _$ImageModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ImageModelImplFromJson(json);
 
-@override final  int? id;
-@override final  String? filename;
-@override final  String? path;
-@override final  int? order;
-@override final  int? status;
-@override final  DateTime? created_at;
-@override final  DateTime? updated_at;
+  @override
+  final int? id;
+  @override
+  final String? filename;
+  @override
+  final String? path;
+  @override
+  final int? order;
+  @override
+  final int? status;
+  @override
+  final DateTime? created_at;
+  @override
+  final DateTime? updated_at;
 
-/// Create a copy of ImageModel
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ImageModelCopyWith<_ImageModel> get copyWith => __$ImageModelCopyWithImpl<_ImageModel>(this, _$identity);
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'ImageModel(id: $id, filename: $filename, path: $path, order: $order, status: $status, created_at: $created_at, updated_at: $updated_at)';
+  }
 
-@override
-Map<String, dynamic> toJson() {
-  return _$ImageModelToJson(this, );
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ImageModel'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('filename', filename))
+      ..add(DiagnosticsProperty('path', path))
+      ..add(DiagnosticsProperty('order', order))
+      ..add(DiagnosticsProperty('status', status))
+      ..add(DiagnosticsProperty('created_at', created_at))
+      ..add(DiagnosticsProperty('updated_at', updated_at));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ImageModelImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.filename, filename) ||
+                other.filename == filename) &&
+            (identical(other.path, path) || other.path == path) &&
+            (identical(other.order, order) || other.order == order) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.created_at, created_at) ||
+                other.created_at == created_at) &&
+            (identical(other.updated_at, updated_at) ||
+                other.updated_at == updated_at));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+    runtimeType,
+    id,
+    filename,
+    path,
+    order,
+    status,
+    created_at,
+    updated_at,
+  );
+
+  /// Create a copy of ImageModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ImageModelImplCopyWith<_$ImageModelImpl> get copyWith =>
+      __$$ImageModelImplCopyWithImpl<_$ImageModelImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ImageModelImplToJson(this);
+  }
 }
-@override
-void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-  properties
-    ..add(DiagnosticsProperty('type', 'ImageModel'))
-    ..add(DiagnosticsProperty('id', id))..add(DiagnosticsProperty('filename', filename))..add(DiagnosticsProperty('path', path))..add(DiagnosticsProperty('order', order))..add(DiagnosticsProperty('status', status))..add(DiagnosticsProperty('created_at', created_at))..add(DiagnosticsProperty('updated_at', updated_at));
+
+abstract class _ImageModel implements ImageModel {
+  const factory _ImageModel({
+    final int? id,
+    final String? filename,
+    final String? path,
+    final int? order,
+    final int? status,
+    final DateTime? created_at,
+    final DateTime? updated_at,
+  }) = _$ImageModelImpl;
+
+  factory _ImageModel.fromJson(Map<String, dynamic> json) =
+      _$ImageModelImpl.fromJson;
+
+  @override
+  int? get id;
+  @override
+  String? get filename;
+  @override
+  String? get path;
+  @override
+  int? get order;
+  @override
+  int? get status;
+  @override
+  DateTime? get created_at;
+  @override
+  DateTime? get updated_at;
+
+  /// Create a copy of ImageModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ImageModelImplCopyWith<_$ImageModelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ImageModel&&(identical(other.id, id) || other.id == id)&&(identical(other.filename, filename) || other.filename == filename)&&(identical(other.path, path) || other.path == path)&&(identical(other.order, order) || other.order == order)&&(identical(other.status, status) || other.status == status)&&(identical(other.created_at, created_at) || other.created_at == created_at)&&(identical(other.updated_at, updated_at) || other.updated_at == updated_at));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,id,filename,path,order,status,created_at,updated_at);
-
-@override
-String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
-  return 'ImageModel(id: $id, filename: $filename, path: $path, order: $order, status: $status, created_at: $created_at, updated_at: $updated_at)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ImageModelCopyWith<$Res> implements $ImageModelCopyWith<$Res> {
-  factory _$ImageModelCopyWith(_ImageModel value, $Res Function(_ImageModel) _then) = __$ImageModelCopyWithImpl;
-@override @useResult
-$Res call({
- int? id, String? filename, String? path, int? order, int? status, DateTime? created_at, DateTime? updated_at
-});
-
-
-
-
-}
-/// @nodoc
-class __$ImageModelCopyWithImpl<$Res>
-    implements _$ImageModelCopyWith<$Res> {
-  __$ImageModelCopyWithImpl(this._self, this._then);
-
-  final _ImageModel _self;
-  final $Res Function(_ImageModel) _then;
-
-/// Create a copy of ImageModel
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = freezed,Object? filename = freezed,Object? path = freezed,Object? order = freezed,Object? status = freezed,Object? created_at = freezed,Object? updated_at = freezed,}) {
-  return _then(_ImageModel(
-id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as int?,filename: freezed == filename ? _self.filename : filename // ignore: cast_nullable_to_non_nullable
-as String?,path: freezed == path ? _self.path : path // ignore: cast_nullable_to_non_nullable
-as String?,order: freezed == order ? _self.order : order // ignore: cast_nullable_to_non_nullable
-as int?,status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
-as int?,created_at: freezed == created_at ? _self.created_at : created_at // ignore: cast_nullable_to_non_nullable
-as DateTime?,updated_at: freezed == updated_at ? _self.updated_at : updated_at // ignore: cast_nullable_to_non_nullable
-as DateTime?,
-  ));
-}
-
-
-}
-
-// dart format on

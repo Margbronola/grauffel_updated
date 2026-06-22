@@ -6,16 +6,17 @@ part of 'pivot_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_PivotModel _$PivotModelFromJson(Map<String, dynamic> json) => _PivotModel(
-  booking_id: (json['booking_id'] as num?)?.toInt(),
-  equipement_id: (json['equipement_id'] as num?)?.toInt(),
-  quantity: (json['quantity'] as num?)?.toInt(),
-  capacity: (json['capacity'] as num?)?.toInt(),
-  price: (json['price'] as num?)?.toDouble(),
-  total: (json['total'] as num?)?.toDouble(),
-);
+_$PivotModelImpl _$$PivotModelImplFromJson(Map<String, dynamic> json) =>
+    _$PivotModelImpl(
+      booking_id: (json['booking_id'] as num?)?.toInt(),
+      equipement_id: (json['equipement_id'] as num?)?.toInt(),
+      quantity: (json['quantity'] as num?)?.toInt(),
+      capacity: (json['capacity'] as num?)?.toInt(),
+      price: (json['price'] as num?)?.toDouble(),
+      total: (json['total'] as num?)?.toDouble(),
+    );
 
-Map<String, dynamic> _$PivotModelToJson(_PivotModel instance) =>
+Map<String, dynamic> _$$PivotModelImplToJson(_$PivotModelImpl instance) =>
     <String, dynamic>{
       'booking_id': instance.booking_id,
       'equipement_id': instance.equipement_id,

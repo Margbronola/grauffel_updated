@@ -6,31 +6,32 @@ part of 'salle_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_SalleModel _$SalleModelFromJson(Map<String, dynamic> json) => _SalleModel(
-  id: (json['id'] as num?)?.toInt(),
-  name: json['name'] as String?,
-  description: json['description'] as String?,
-  location: json['location'] as String?,
-  color_code: json['color_code'] as String?,
-  capacity: (json['capacity'] as num?)?.toInt(),
-  status: (json['status'] as num?)?.toInt(),
-  created_at: json['created_at'] == null
-      ? null
-      : DateTime.parse(json['created_at'] as String),
-  updated_at: json['updated_at'] == null
-      ? null
-      : DateTime.parse(json['updated_at'] as String),
-  status_name: json['status_name'] as String?,
-  activity_capacity: (json['activity_capacity'] as num?)?.toInt(),
-  bookings: json['bookings'] as List<dynamic>?,
-  activitysalle: json['activitysalle'] as List<dynamic>?,
-  pivot: json['pivot'] as Map<String, dynamic>?,
-  courses: (json['courses'] as List<dynamic>?)
-      ?.map((e) => CourseModel.fromJson(e as Map<String, dynamic>))
-      .toList(),
-);
+_$SalleModelImpl _$$SalleModelImplFromJson(Map<String, dynamic> json) =>
+    _$SalleModelImpl(
+      id: (json['id'] as num?)?.toInt(),
+      name: json['name'] as String?,
+      description: json['description'] as String?,
+      location: json['location'] as String?,
+      color_code: json['color_code'] as String?,
+      capacity: (json['capacity'] as num?)?.toInt(),
+      status: (json['status'] as num?)?.toInt(),
+      created_at: json['created_at'] == null
+          ? null
+          : DateTime.parse(json['created_at'] as String),
+      updated_at: json['updated_at'] == null
+          ? null
+          : DateTime.parse(json['updated_at'] as String),
+      status_name: json['status_name'] as String?,
+      activity_capacity: (json['activity_capacity'] as num?)?.toInt(),
+      bookings: json['bookings'] as List<dynamic>?,
+      activitysalle: json['activitysalle'] as List<dynamic>?,
+      pivot: json['pivot'] as Map<String, dynamic>?,
+      courses: (json['courses'] as List<dynamic>?)
+          ?.map((e) => CourseModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$SalleModelToJson(_SalleModel instance) =>
+Map<String, dynamic> _$$SalleModelImplToJson(_$SalleModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

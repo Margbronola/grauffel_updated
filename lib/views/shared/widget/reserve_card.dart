@@ -26,7 +26,7 @@ class ReserveCard extends StatefulWidget {
 class _ReserveCardState extends State<ReserveCard> {
   String dateFormat(String date) {
     DateTime dateFormated = DateTime.parse(date);
-    final DateFormat formatter = DateFormat('MMMM');
+    final DateFormat formatter = DateFormat('MMMM', 'fr_FR');
     final String formattedMonth = formatter.format(dateFormated);
 
     return "${dateFormated.day} $formattedMonth ${dateFormated.year}";
@@ -80,53 +80,54 @@ class _ReserveCardState extends State<ReserveCard> {
                         const SizedBox(height: 5),
                         !widget.isCourse
                             ? FittedBox(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    children: [
-                                      const Icon(
-                                        Icons.calendar_month,
-                                        color: buttonColor,
-                                      ),
-                                      horizontalSpaceSmall(),
-                                      Text(
-                                        "du ${dateFormat(widget.reserve.dateFrom!)} au ${dateFormat(widget.reserve.dateTo!)}",
-                                        overflow: TextOverflow.clip,
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(height: 5),
-                                  Row(
-                                    children: [
-                                      const Icon(
-                                        Icons.watch_later_sharp,
-                                        color: buttonColor,
-                                      ),
-                                      horizontalSpaceSmall(),
-                                      Text(
-                                        "${widget.reserve.startTime!.split(":")[0]}h${widget.reserve.startTime!.split(":")[1]} à ${widget.reserve.endTime!.split(":")[0]}h${widget.reserve.endTime!.split(":")[1]}",
-                                        overflow: TextOverflow.clip,
-                                      ),
-                                    ],
-                                  ),
-                                  Text(
-                                    "Votre instructeur : ${widget.reserve.instructor}",
-                                  ),
-                                  // Text(
-                                  //     "Nombre de places restantes : ${widget.reserve.restantes}")
-                                ],
-                              ),
-                            )
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        const Icon(
+                                          Icons.calendar_month,
+                                          color: buttonColor,
+                                        ),
+                                        horizontalSpaceSmall(),
+                                        Text(
+                                          "du ${dateFormat(widget.reserve.dateFrom!)} au ${dateFormat(widget.reserve.dateTo!)}",
+                                          overflow: TextOverflow.clip,
+                                        ),
+                                      ],
+                                    ),
+                                    const SizedBox(height: 5),
+                                    Row(
+                                      children: [
+                                        const Icon(
+                                          Icons.watch_later_sharp,
+                                          color: buttonColor,
+                                        ),
+                                        horizontalSpaceSmall(),
+                                        Text(
+                                          "${widget.reserve.startTime!.split(":")[0]}h${widget.reserve.startTime!.split(":")[1]} à ${widget.reserve.endTime!.split(":")[0]}h${widget.reserve.endTime!.split(":")[1]}",
+                                          overflow: TextOverflow.clip,
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      "Votre instructeur : ${widget.reserve.instructor}",
+                                    ),
+                                    // Text(
+                                    //     "Nombre de places restantes : ${widget.reserve.restantes}")
+                                  ],
+                                ),
+                              )
                             : Text(
-                              widget.reserve.description!,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: ThemeData().textTheme.bodyLarge!.copyWith(
-                                fontSize: 12.sp,
-                                fontFamily: 'ProductSans',
+                                widget.reserve.description!,
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: ThemeData().textTheme.bodyLarge!
+                                    .copyWith(
+                                      fontSize: 12.sp,
+                                      fontFamily: 'ProductSans',
+                                    ),
                               ),
-                            ),
                       ],
                     ),
                   ),

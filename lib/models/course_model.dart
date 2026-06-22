@@ -26,6 +26,7 @@ abstract class CourseModel with _$CourseModel {
     String? salle_id,
     String? description,
     int? status,
+    bool? is_bookable,
     DateTime? created_at,
     DateTime? updated_at,
     String? status_name,
